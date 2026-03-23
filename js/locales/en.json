@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "page_title": "Shadow Work Quiz - Meet Your Hidden Self | DopaBrain",
+    "description": "What shadow self lurks beneath your surface? People Pleaser, Perfectionist, Controller, Avoider, Rebel, or Caretaker? 8 questions reveal your hidden shadow!",
+    "keywords": "shadow work quiz, shadow self test, Jungian shadow test, shadow work journal, inner shadow quiz, repressed self test, psychology quiz, self-discovery test, shadow archetype, Carl Jung shadow",
+    "og_title": "Shadow Work Quiz - Meet Your Hidden Self",
+    "og_description": "8 questions reveal your shadow archetype! Discover which hidden pattern drives your behavior.",
+    "twitter_title": "Shadow Work Quiz - Meet Your Hidden Self",
+    "twitter_description": "8 questions reveal your shadow archetype!"
+  },
+  "app": {
+    "skipLink": "Skip to main",
+    "loading": "Loading..."
+  },
+  "intro": {
+    "title": "Shadow Work Quiz",
+    "subtitle": "Meet Your Hidden Self",
+    "social_proof": "people explored",
+    "feature_types": "6 shadow types",
+    "feature_questions": "8 scenarios",
+    "feature_metrics": "5 shadow dimensions",
+    "time_estimate": "Takes about 2 minutes"
+  },
+  "carousel": {
+    "peoplePleaser": "People Pleaser",
+    "perfectionist": "Perfectionist",
+    "controller": "Controller",
+    "avoider": "Avoider",
+    "rebel": "Rebel",
+    "caretaker": "Caretaker"
+  },
+  "button": {
+    "start": "Explore Your Shadow",
+    "retry": "Try Again",
+    "share_kakao": "KakaoTalk",
+    "share_twitter": "Twitter",
+    "share_facebook": "Facebook",
+    "share_copy": "Copy Link"
+  },
+  "question": {
+    "0": "When a friend takes your help for granted, what's your first reaction?",
+    "0a": "Say it's fine and swallow my frustration",
+    "0b": "Blame myself for not setting better expectations",
+    "0c": "Set conditions so I stay in control of the situation",
+    "0d": "Avoid the conversation and deal with it later",
+    "0e": "Express my frustration directly and set a boundary",
+    "0f": "Try to understand their perspective while feeling drained",
+
+    "1": "After making a mistake in an important presentation, how do you cope?",
+    "1a": "Pretend nothing happened and hope no one noticed",
+    "1b": "Replay the mistake over and over, criticizing myself",
+    "1c": "Vow to prepare so perfectly next time it can't happen again",
+    "1d": "Want to avoid presentations altogether",
+    "1e": "Remind myself that mistakes are okay and move on",
+    "1f": "Worry more about how others felt than my own feelings",
+
+    "2": "When someone close to you says something hurtful?",
+    "2a": "Pretend it didn't hurt to keep the peace",
+    "2b": "Analyze what I did wrong to deserve it",
+    "2c": "Try to regain the upper hand in the relationship",
+    "2d": "Pull away and reduce contact",
+    "2e": "Honestly tell them they hurt me",
+    "2f": "Try to understand their pain while putting my feelings aside",
+
+    "3": "When a colleague takes credit for your idea in a team project?",
+    "3a": "Let it go — conflict isn't worth it",
+    "3b": "Try to come up with an even better idea to prove myself",
+    "3c": "Make sure I present my own work next time to claim credit",
+    "3d": "Lose motivation for team projects entirely",
+    "3e": "Speak up immediately and clarify my contribution",
+    "3f": "Tell myself it's fine as long as the team succeeds",
+
+    "4": "When you have free time alone on a weekend, what's your first thought?",
+    "4a": "I should reach out to someone and make plans",
+    "4b": "I should catch up on work or self-improvement",
+    "4c": "Plan and organize everything for the coming week",
+    "4d": "I don't want to do anything — just lie down",
+    "4e": "Do whatever I feel like and enjoy the freedom",
+    "4f": "Think about what I could do for my family or friends",
+
+    "5": "When strong emotions (anger, sadness, jealousy) arise, what's your pattern?",
+    "5a": "Smile and act like nothing's wrong",
+    "5b": "Judge myself as immature for feeling this way",
+    "5c": "Find the cause and try to control the situation",
+    "5d": "Distract myself to forget the emotion",
+    "5e": "Feel the emotion fully and express it authentically",
+    "5f": "Focus on how everyone else is feeling instead of myself",
+
+    "6": "When you receive criticism or negative feedback?",
+    "6a": "Agree with a smile while crumbling inside",
+    "6b": "Vow to address every point perfectly so I never hear it again",
+    "6c": "Question the critic's authority or motives",
+    "6d": "Push it aside and focus on something else",
+    "6e": "Accept what's valid and dismiss what isn't",
+    "6f": "Worry about how the person giving feedback felt",
+
+    "7": "Late at night, reflecting on yourself, what thought comes up most?",
+    "7a": "I'm afraid people would be disappointed if they knew the real me",
+    "7b": "There's always a feeling that I'm not enough",
+    "7c": "It makes me anxious that I can't control everything",
+    "7d": "Everything feels exhausting and I want to escape this discomfort",
+    "7e": "I accept myself as I am, imperfections and all",
+    "7f": "I worry whether I'm doing enough for the people I care about"
+  },
+  "analyzing": {
+    "title": "Exploring your shadow...",
+    "scanning": "Scanning shadow responses...",
+    "mapping": "Mapping shadow patterns...",
+    "integrating": "Integrating archetypes...",
+    "complete": "Shadow profile complete!"
+  },
+  "result": {
+    "your_type": "Your Shadow Archetype",
+    "shadow_dimensions": "Shadow Dimensions",
+    "dimension_scores": "Dimension Scores",
+    "key_traits": "Shadow Patterns",
+    "journal_prompt": "Journal Prompt",
+    "percentile": "Only {pct} of people share the {type} archetype",
+    "moreTests": "Explore More",
+    "share": "Share Your Result"
+  },
+  "metric": {
+    "repression": "Repression",
+    "projection": "Projection",
+    "denial": "Denial",
+    "avoidance": "Avoidance",
+    "integration": "Integration"
+  },
+  "type": {
+    "peoplePleaser": {
+      "name": "The People Pleaser",
+      "tagline": "A mask that hides the real you behind others' expectations",
+      "description": "Your shadow is suppressed anger and boundaries. An unconscious fear that saying 'no' means being unloved keeps you performing the role of the 'nice one.' But authentic relationships begin when you show your real emotions. Your anger is a signal pointing to where your boundaries need to be.",
+      "trait1": "Difficulty setting boundaries",
+      "trait2": "Conflict avoidance",
+      "trait3": "Excessive empathy",
+      "prompt": "\"When was the last time I genuinely said 'no'? What emotion came up when I did?\""
+    },
+    "perfectionist": {
+      "name": "The Perfectionist",
+      "tagline": "Armor that hides vulnerability behind a flawless facade",
+      "description": "Your shadow is suppressed vulnerability. An unconscious belief that mistakes erase your worth keeps you on the endless treadmill of self-improvement. But real growth begins when you embrace imperfection. You are already enough.",
+      "trait1": "Self-criticism",
+      "trait2": "Impossibly high standards",
+      "trait3": "Fear of failure",
+      "prompt": "\"If I could be loved even without being perfect, what would I dare to try?\""
+    },
+    "controller": {
+      "name": "The Controller",
+      "tagline": "A fortress built on control instead of trust",
+      "description": "Your shadow is suppressed trust and surrender. An unconscious fear that letting go means falling apart keeps you constantly on guard. But paradoxically, accepting that you can't control everything is when you find true stability.",
+      "trait1": "Excessive need for control",
+      "trait2": "Difficulty delegating",
+      "trait3": "Intolerance of uncertainty",
+      "prompt": "\"When I actually let go of control, what was the worst that happened? Was it truly unbearable?\""
+    },
+    "avoider": {
+      "name": "The Avoider",
+      "tagline": "A fog that chooses safe numbness over painful truth",
+      "description": "Your shadow is suppressed pain and confrontation. An unconscious fear that feeling uncomfortable emotions will break you keeps you in your safe zone. But hidden in the things you avoid are your greatest opportunities for growth.",
+      "trait1": "Emotional numbness",
+      "trait2": "Procrastination patterns",
+      "trait3": "Avoidance of deep connection",
+      "prompt": "\"What conversation, emotion, or decision am I most avoiding? What am I losing by avoiding it?\""
+    },
+    "rebel": {
+      "name": "The Rebel",
+      "tagline": "A wild flame that chooses freedom over belonging",
+      "description": "Your shadow is suppressed belonging and conformity. An unconscious fear that following rules means losing yourself keeps you in constant resistance. But true freedom comes not from opposing for the sake of opposing, but from choosing what you genuinely want.",
+      "trait1": "Challenging authority",
+      "trait2": "Fierce independence",
+      "trait3": "Guarded intimacy",
+      "prompt": "\"Am I truly against this, or do I just hate the feeling of being controlled?\""
+    },
+    "caretaker": {
+      "name": "The Caretaker",
+      "tagline": "An emptiness behind the mask of caring for everyone but yourself",
+      "description": "Your shadow is suppressed self-needs. An unconscious belief that prioritizing yourself is selfish keeps you endlessly giving to others. But you can't pour from an empty cup. Self-care isn't selfishness — it's survival.",
+      "trait1": "Self-sacrifice",
+      "trait2": "Identity through being needed",
+      "trait3": "Difficulty accepting help",
+      "prompt": "\"If I didn't have anyone to take care of, who would I be? Does my identity exist without caregiving?\""
+    }
+  },
+  "share": {
+    "text": "My shadow archetype is '{type}'! What's your hidden self?"
+  },
+  "game": {
+    "back": "DopaBrain Home"
+  }
+}

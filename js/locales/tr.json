@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "page_title": "Gölge Çalışması Testi - Gizli Benliğinizle Tanışın | DopaBrain",
+    "description": "Yüzeyinizin altında hangi gölge benlik gizleniyor? Herkesi Memnun Eden, Mükemmeliyetçi, Kontrol Eden, Kaçan, İsyankâr mı yoksa Bakıcı mı? 8 soru gizli gölgenizi ortaya çıkarıyor!",
+    "keywords": "gölge çalışması testi, gölge benlik testi, Jung gölge testi, gölge çalışma günlüğü, iç gölge testi, bastırılmış benlik testi, psikoloji testi, kendini keşfetme testi, gölge arketipi, Carl Jung gölge",
+    "og_title": "Gölge Çalışması Testi - Gizli Benliğinizle Tanışın",
+    "og_description": "8 soru gölge arketiponuzu ortaya çıkarıyor! Davranışlarınızı yönlendiren gizli kalıbı keşfedin.",
+    "twitter_title": "Gölge Çalışması Testi - Gizli Benliğinizle Tanışın",
+    "twitter_description": "8 soru gölge arketiponuzu ortaya çıkarıyor!"
+  },
+  "app": {
+    "skipLink": "Ana içeriğe geç",
+    "loading": "Yükleniyor..."
+  },
+  "intro": {
+    "title": "Gölge Çalışması Testi",
+    "subtitle": "Gizli Benliğinizle Tanışın",
+    "social_proof": "kişi keşfetti",
+    "feature_types": "6 gölge tipi",
+    "feature_questions": "8 senaryo",
+    "feature_metrics": "5 gölge boyutu",
+    "time_estimate": "Yaklaşık 2 dakika sürer"
+  },
+  "carousel": {
+    "peoplePleaser": "Herkesi Memnun Eden",
+    "perfectionist": "Mükemmeliyetçi",
+    "controller": "Kontrol Eden",
+    "avoider": "Kaçan",
+    "rebel": "İsyankâr",
+    "caretaker": "Bakıcı"
+  },
+  "button": {
+    "start": "Gölgenizi Keşfedin",
+    "retry": "Tekrar Dene",
+    "share_kakao": "KakaoTalk",
+    "share_twitter": "Twitter",
+    "share_facebook": "Facebook",
+    "share_copy": "Bağlantıyı Kopyala"
+  },
+  "question": {
+    "0": "Bir arkadaşınız yardımınızı doğal karşıladığında, ilk tepkiniz ne olur?",
+    "0a": "Sorun değil der ve hayal kırıklığımı içime atarım",
+    "0b": "Daha iyi beklentiler belirlemediğim için kendimi suçlarım",
+    "0c": "Durumu kontrol altında tutabilmek için şartlar koyarım",
+    "0d": "Konuşmadan kaçarım ve sonra hallederim",
+    "0e": "Hayal kırıklığımı doğrudan ifade eder ve sınır koyarım",
+    "0f": "Kendimi tükenmiş hissederken onların bakış açısını anlamaya çalışırım",
+
+    "1": "Önemli bir sunumda hata yaptıktan sonra nasıl başa çıkarsınız?",
+    "1a": "Hiçbir şey olmamış gibi davranır ve kimsenin fark etmediğini umarım",
+    "1b": "Hatayı tekrar tekrar düşünür, kendimi eleştiririm",
+    "1c": "Bir daha olmaması için mükemmel hazırlanacağıma yemin ederim",
+    "1d": "Sunumlardan tamamen kaçınmak isterim",
+    "1e": "Kendime hataların normal olduğunu hatırlatır ve devam ederim",
+    "1f": "Kendi duygularımdan çok başkalarının nasıl hissettiğini düşünürüm",
+
+    "2": "Size yakın biri incitici bir şey söylediğinde?",
+    "2a": "Huzuru korumak için acımadığımış gibi davranırım",
+    "2b": "Bunu hak etmek için ne yanlış yaptığımı analiz ederim",
+    "2c": "İlişkide üstünlüğü geri almaya çalışırım",
+    "2d": "Uzaklaşır ve iletişimi azaltırım",
+    "2e": "Onlara dürüstçe beni incittiklerini söylerim",
+    "2f": "Kendi duygularımı bir kenara koyarak onların acısını anlamaya çalışırım",
+
+    "3": "Bir ekip projesinde bir iş arkadaşınız fikrinizin hakkını yediğinde?",
+    "3a": "Boş verir — çatışmaya değmez",
+    "3b": "Kendimi kanıtlamak için daha da iyi bir fikir bulmaya çalışırım",
+    "3c": "Bir dahaki sefere katkımı talep etmek için kendi işimi sunarım",
+    "3d": "Ekip projelerine olan motivasyonumu tamamen kaybederim",
+    "3e": "Hemen konuşur ve katkımı netleştiririm",
+    "3f": "Ekip başarılı oldukça sorun olmadığını düşünürüm",
+
+    "4": "Hafta sonu yalnız başınıza boş zamanınız olduğunda, ilk düşünceniz ne olur?",
+    "4a": "Biriyle iletişime geçip plan yapmalıyım",
+    "4b": "İşe yetişmeli veya kendimi geliştirmeliyim",
+    "4c": "Önümüzdeki hafta için her şeyi planlar ve düzenlerim",
+    "4d": "Hiçbir şey yapmak istemem — sadece uzanmak isterim",
+    "4e": "Canımın istediği şeyi yapar ve özgürlüğün tadını çıkarırım",
+    "4f": "Ailem veya arkadaşlarım için ne yapabileceğimi düşünürüm",
+
+    "5": "Güçlü duygular (öfke, üzüntü, kıskançlık) ortaya çıktığında, kalıbınız nedir?",
+    "5a": "Gülümser ve bir şey yokmuş gibi davranırım",
+    "5b": "Böyle hissettiğim için kendimi olgunlaşmamış olarak değerlendiririm",
+    "5c": "Nedeni bulup durumu kontrol etmeye çalışırım",
+    "5d": "Duyguyu unutmak için dikkatimi dağıtırım",
+    "5e": "Duyguyu tam olarak hisseder ve özgün bir şekilde ifade ederim",
+    "5f": "Kendim yerine başkalarının nasıl hissettiğine odaklanırım",
+
+    "6": "Eleştiri veya olumsuz geri bildirim aldığınızda?",
+    "6a": "Gülümseyerek kabul ederken içten içe çökerim",
+    "6b": "Bir daha duymamak için her noktayı mükemmel şekilde ele almaya yemin ederim",
+    "6c": "Eleştirinin otoritesini veya motivasyonunu sorgularım",
+    "6d": "Bir kenara bırakır ve başka bir şeye odaklanırım",
+    "6e": "Geçerli olanı kabul eder, olmayanı reddederim",
+    "6f": "Geri bildirim veren kişinin nasıl hissettiğini merak ederim",
+
+    "7": "Gece geç saatlerde kendinizi düşünürken, en çok hangi düşünce gelir?",
+    "7a": "Gerçek beni bilselerdi insanların hayal kırıklığına uğrayacağından korkuyorum",
+    "7b": "Her zaman yeterli olmadığım hissi var",
+    "7c": "Her şeyi kontrol edemediğim için endişeleniyorum",
+    "7d": "Her şey yorucu geliyor ve bu rahatsızlıktan kaçmak istiyorum",
+    "7e": "Kendimi kusurlarımla birlikte olduğum gibi kabul ediyorum",
+    "7f": "Önemsediğim insanlar için yeterince bir şey yapıp yapmadığımı merak ediyorum"
+  },
+  "analyzing": {
+    "title": "Gölgeniz keşfediliyor...",
+    "scanning": "Gölge yanıtları taranıyor...",
+    "mapping": "Gölge kalıpları haritalanıyor...",
+    "integrating": "Arketipler entegre ediliyor...",
+    "complete": "Gölge profili tamamlandı!"
+  },
+  "result": {
+    "your_type": "Gölge Arketiponuz",
+    "shadow_dimensions": "Gölge Boyutları",
+    "dimension_scores": "Boyut Puanları",
+    "key_traits": "Gölge Kalıpları",
+    "journal_prompt": "Günlük İstemi",
+    "percentile": "Sadece {pct} kişi {type} arketipini paylaşıyor",
+    "moreTests": "Daha Fazla Keşfet",
+    "share": "Sonucunuzu Paylaşın"
+  },
+  "metric": {
+    "repression": "Bastırma",
+    "projection": "Projeksiyon",
+    "denial": "İnkâr",
+    "avoidance": "Kaçınma",
+    "integration": "Bütünleşme"
+  },
+  "type": {
+    "peoplePleaser": {
+      "name": "Herkesi Memnun Eden",
+      "tagline": "Gerçek sizi başkalarının beklentilerinin arkasında saklayan bir maske",
+      "description": "Gölgeniz bastırılmış öfke ve sınırlardır. 'Hayır' demenin sevilmemek anlamına geldiğine dair bilinçdışı bir korku, sizi 'iyi insan' rolünü oynamaya devam ettiriyor. Ancak özgün ilişkiler, gerçek duygularınızı gösterdiğinizde başlar. Öfkeniz, sınırlarınızın nerede olması gerektiğine işaret eden bir sinyaldir.",
+      "trait1": "Sınır koymakta zorluk",
+      "trait2": "Çatışmadan kaçınma",
+      "trait3": "Aşırı empati",
+      "prompt": "\"En son gerçekten ne zaman 'hayır' dedim? O zaman hangi duygu ortaya çıktı?\""
+    },
+    "perfectionist": {
+      "name": "Mükemmeliyetçi",
+      "tagline": "Kusursuz bir cephenin arkasında kırılganlığı gizleyen bir zırh",
+      "description": "Gölgeniz bastırılmış kırılganlıktır. Hataların değerinizi sildiğine dair bilinçdışı bir inanç, sizi sonsuz bir kendini geliştirme koşu bandında tutuyor. Ancak gerçek büyüme, kusursuzluğu kucakladığınızda başlar. Zaten yeterlisiniz.",
+      "trait1": "Kendini eleştirme",
+      "trait2": "İmkansız derecede yüksek standartlar",
+      "trait3": "Başarısızlık korkusu",
+      "prompt": "\"Mükemmel olmadan da sevilebilseydim, ne yapmaya cesaret ederdim?\""
+    },
+    "controller": {
+      "name": "Kontrol Eden",
+      "tagline": "Güven yerine kontrol üzerine inşa edilmiş bir kale",
+      "description": "Gölgeniz bastırılmış güven ve teslimiyettir. Kontrolü bırakmanın çökmek anlamına geldiğine dair bilinçdışı bir korku, sizi sürekli tetikte tutuyor. Ancak paradoks şu ki, her şeyi kontrol edemeyeceğinizi kabul ettiğinizde gerçek istikrarı bulursunuz.",
+      "trait1": "Aşırı kontrol ihtiyacı",
+      "trait2": "Devretmekte zorluk",
+      "trait3": "Belirsizliğe tahammülsüzlük",
+      "prompt": "\"Kontrolü gerçekten bıraktığımda, olan en kötü şey neydi? Gerçekten dayanılmaz mıydı?\""
+    },
+    "avoider": {
+      "name": "Kaçan",
+      "tagline": "Acı veren gerçek yerine güvenli uyuşukluğu seçen bir sis",
+      "description": "Gölgeniz bastırılmış acı ve yüzleşmedir. Rahatsız edici duyguları hissetmenin sizi kıracağına dair bilinçdışı bir korku, sizi güvenli bölgenizde tutuyor. Ancak kaçındığınız şeylerin içinde büyümeniz için en büyük fırsatlar gizlidir.",
+      "trait1": "Duygusal uyuşukluk",
+      "trait2": "Erteleme kalıpları",
+      "trait3": "Derin bağlantıdan kaçınma",
+      "prompt": "\"En çok hangi konuşmadan, duygumdan veya karardan kaçınıyorum? Kaçınarak neyi kaybediyorum?\""
+    },
+    "rebel": {
+      "name": "İsyankâr",
+      "tagline": "Ait olma yerine özgürlüğü seçen vahşi bir alev",
+      "description": "Gölgeniz bastırılmış aidiyet ve uyumdur. Kurallara uymanın kendinizi kaybetmek anlamına geldiğine dair bilinçdışı bir korku, sizi sürekli dirençte tutuyor. Ancak gerçek özgürlük, karşı çıkmak uğruna karşı çıkmaktan değil, gerçekten istediğinizi seçmekten gelir.",
+      "trait1": "Otoriteye meydan okuma",
+      "trait2": "Şiddetli bağımsızlık",
+      "trait3": "Korunan samimiyet",
+      "prompt": "\"Gerçekten buna karşı mıyım, yoksa sadece kontrol edilmekten nefret mi ediyorum?\""
+    },
+    "caretaker": {
+      "name": "Bakıcı",
+      "tagline": "Kendiniz hariç herkese bakmak maskesinin arkasındaki bir boşluk",
+      "description": "Gölgeniz bastırılmış öz-ihtiyaçlardır. Kendinizi önceliklendirmenin bencillik olduğuna dair bilinçdışı bir inanç, sizi başkalarına sonsuza dek vermeye devam ettiriyor. Ancak boş bir bardaktan dökülemezsiniz. Kendine bakım bencillik değildir — hayatta kalmadır.",
+      "trait1": "Kendini feda etme",
+      "trait2": "İhtiyaç duyularak kimlik oluşturma",
+      "trait3": "Yardım kabul etmekte zorluk",
+      "prompt": "\"Bakacak kimse olmasaydı, kim olurdum? Kimliğim bakım vermeden var olabilir mi?\""
+    }
+  },
+  "share": {
+    "text": "Benim gölge arketipim '{type}'! Sizin gizli benliğiniz ne?"
+  },
+  "game": {
+    "back": "DopaBrain Ana Sayfa"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "page_title": "Kuis Shadow Work - Temui Sisi Tersembunyi Anda | DopaBrain",
+    "description": "Bayangan diri seperti apa yang tersembunyi dalam diri Anda? People Pleaser, Perfeksionis, Pengontrol, Penghindari, Pemberontak, atau Pengasuh? 8 pertanyaan mengungkap bayangan tersembunyi Anda!",
+    "keywords": "kuis shadow work, tes bayangan diri, tes bayangan Jung, jurnal shadow work, kuis bayangan batin, tes diri tertekan, kuis psikologi, tes penemuan diri, arketipe bayangan, Carl Jung shadow",
+    "og_title": "Kuis Shadow Work - Temui Sisi Tersembunyi Anda",
+    "og_description": "8 pertanyaan mengungkap arketipe bayangan Anda! Temukan pola tersembunyi yang menggerakkan perilaku Anda.",
+    "twitter_title": "Kuis Shadow Work - Temui Sisi Tersembunyi Anda",
+    "twitter_description": "8 pertanyaan mengungkap arketipe bayangan Anda!"
+  },
+  "app": {
+    "skipLink": "Langsung ke konten",
+    "loading": "Memuat..."
+  },
+  "intro": {
+    "title": "Kuis Shadow Work",
+    "subtitle": "Temui Sisi Tersembunyi Anda",
+    "social_proof": "orang telah mencoba",
+    "feature_types": "6 tipe bayangan",
+    "feature_questions": "8 skenario",
+    "feature_metrics": "5 dimensi bayangan",
+    "time_estimate": "Memakan waktu sekitar 2 menit"
+  },
+  "carousel": {
+    "peoplePleaser": "People Pleaser",
+    "perfectionist": "Perfeksionis",
+    "controller": "Pengontrol",
+    "avoider": "Penghindari",
+    "rebel": "Pemberontak",
+    "caretaker": "Pengasuh"
+  },
+  "button": {
+    "start": "Jelajahi Bayangan Anda",
+    "retry": "Coba Lagi",
+    "share_kakao": "KakaoTalk",
+    "share_twitter": "Twitter",
+    "share_facebook": "Facebook",
+    "share_copy": "Salin Tautan"
+  },
+  "question": {
+    "0": "Ketika seorang teman menganggap bantuan Anda sebagai hal yang wajar, apa reaksi pertama Anda?",
+    "0a": "Bilang tidak apa-apa dan menelan rasa frustrasi",
+    "0b": "Menyalahkan diri sendiri karena tidak menetapkan ekspektasi yang lebih baik",
+    "0c": "Menetapkan syarat agar saya tetap mengontrol situasi",
+    "0d": "Menghindari percakapan dan menghadapinya nanti",
+    "0e": "Mengungkapkan frustrasi saya secara langsung dan menetapkan batasan",
+    "0f": "Mencoba memahami perspektif mereka sambil merasa terkuras",
+
+    "1": "Setelah membuat kesalahan dalam presentasi penting, bagaimana Anda mengatasinya?",
+    "1a": "Berpura-pura tidak terjadi apa-apa dan berharap tidak ada yang menyadari",
+    "1b": "Memutar ulang kesalahan berulang kali, mengkritik diri sendiri",
+    "1c": "Berjanji untuk mempersiapkan dengan sempurna di lain waktu agar tidak terjadi lagi",
+    "1d": "Ingin menghindari presentasi sama sekali",
+    "1e": "Mengingatkan diri sendiri bahwa kesalahan itu wajar dan melanjutkan",
+    "1f": "Lebih khawatir tentang perasaan orang lain daripada perasaan sendiri",
+
+    "2": "Ketika seseorang yang dekat dengan Anda mengatakan sesuatu yang menyakitkan?",
+    "2a": "Berpura-pura tidak sakit untuk menjaga kedamaian",
+    "2b": "Menganalisis apa yang saya lakukan salah sehingga layak mendapatkannya",
+    "2c": "Mencoba merebut kembali kendali dalam hubungan",
+    "2d": "Menjauh dan mengurangi kontak",
+    "2e": "Jujur memberitahu mereka bahwa mereka menyakiti saya",
+    "2f": "Mencoba memahami rasa sakit mereka sambil mengesampingkan perasaan sendiri",
+
+    "3": "Ketika seorang rekan kerja mengklaim ide Anda dalam proyek tim?",
+    "3a": "Membiarkannya — konflik tidak sebanding",
+    "3b": "Mencoba menghasilkan ide yang lebih baik untuk membuktikan diri",
+    "3c": "Memastikan saya mempresentasikan pekerjaan sendiri di lain waktu untuk mengklaim kredit",
+    "3d": "Kehilangan motivasi untuk proyek tim sama sekali",
+    "3e": "Berbicara langsung dan mengklarifikasi kontribusi saya",
+    "3f": "Mengatakan pada diri sendiri tidak apa-apa selama tim berhasil",
+
+    "4": "Ketika Anda punya waktu luang sendirian di akhir pekan, apa pikiran pertama Anda?",
+    "4a": "Saya harus menghubungi seseorang dan membuat rencana",
+    "4b": "Saya harus mengejar pekerjaan atau pengembangan diri",
+    "4c": "Merencanakan dan mengatur segala sesuatu untuk minggu mendatang",
+    "4d": "Saya tidak ingin melakukan apa-apa — hanya berbaring",
+    "4e": "Melakukan apa pun yang saya inginkan dan menikmati kebebasan",
+    "4f": "Memikirkan apa yang bisa saya lakukan untuk keluarga atau teman",
+
+    "5": "Ketika emosi kuat (marah, sedih, cemburu) muncul, apa pola Anda?",
+    "5a": "Tersenyum dan bersikap seolah tidak ada yang salah",
+    "5b": "Menilai diri sendiri sebagai tidak dewasa karena merasakan hal ini",
+    "5c": "Menemukan penyebabnya dan mencoba mengontrol situasi",
+    "5d": "Mengalihkan perhatian untuk melupakan emosi",
+    "5e": "Merasakan emosi sepenuhnya dan mengekspresikannya dengan autentik",
+    "5f": "Fokus pada perasaan orang lain daripada diri sendiri",
+
+    "6": "Ketika Anda menerima kritik atau umpan balik negatif?",
+    "6a": "Setuju dengan senyuman sambil hancur di dalam",
+    "6b": "Berjanji untuk mengatasi setiap poin dengan sempurna agar tidak pernah mendengarnya lagi",
+    "6c": "Mempertanyakan otoritas atau motif pengkritik",
+    "6d": "Mengesampingkannya dan fokus pada hal lain",
+    "6e": "Menerima yang valid dan menolak yang tidak",
+    "6f": "Khawatir tentang perasaan orang yang memberikan umpan balik",
+
+    "7": "Larut malam, merenungkan diri sendiri, pikiran apa yang paling sering muncul?",
+    "7a": "Saya takut orang-orang akan kecewa jika mereka tahu siapa saya sebenarnya",
+    "7b": "Selalu ada perasaan bahwa saya tidak cukup",
+    "7c": "Membuat saya cemas bahwa saya tidak bisa mengontrol segalanya",
+    "7d": "Semuanya terasa melelahkan dan saya ingin melarikan diri dari ketidaknyamanan ini",
+    "7e": "Saya menerima diri sendiri apa adanya, dengan segala ketidaksempurnaan",
+    "7f": "Saya khawatir apakah saya melakukan cukup banyak untuk orang-orang yang saya pedulikan"
+  },
+  "analyzing": {
+    "title": "Menjelajahi bayangan Anda...",
+    "scanning": "Memindai respons bayangan...",
+    "mapping": "Memetakan pola bayangan...",
+    "integrating": "Mengintegrasikan arketipe...",
+    "complete": "Profil bayangan selesai!"
+  },
+  "result": {
+    "your_type": "Arketipe Bayangan Anda",
+    "shadow_dimensions": "Dimensi Bayangan",
+    "dimension_scores": "Skor Dimensi",
+    "key_traits": "Pola Bayangan",
+    "journal_prompt": "Panduan Jurnal",
+    "percentile": "Hanya {pct} orang yang memiliki arketipe {type}",
+    "moreTests": "Jelajahi Lebih Lanjut",
+    "share": "Bagikan Hasil Anda"
+  },
+  "metric": {
+    "repression": "Represi",
+    "projection": "Proyeksi",
+    "denial": "Penyangkalan",
+    "avoidance": "Penghindaran",
+    "integration": "Integrasi"
+  },
+  "type": {
+    "peoplePleaser": {
+      "name": "The People Pleaser",
+      "tagline": "Topeng yang menyembunyikan diri sejati Anda di balik ekspektasi orang lain",
+      "description": "Bayangan Anda adalah kemarahan dan batasan yang tertekan. Ketakutan bawah sadar bahwa mengatakan 'tidak' berarti tidak dicintai membuat Anda terus berperan sebagai 'orang baik.' Tapi hubungan yang otentik dimulai ketika Anda menunjukkan emosi sejati. Kemarahan Anda adalah sinyal yang menunjukkan di mana batasan Anda perlu ditegakkan.",
+      "trait1": "Kesulitan menetapkan batasan",
+      "trait2": "Menghindari konflik",
+      "trait3": "Empati berlebihan",
+      "prompt": "\"Kapan terakhir kali saya benar-benar mengatakan 'tidak'? Emosi apa yang muncul saat itu?\""
+    },
+    "perfectionist": {
+      "name": "The Perfectionist",
+      "tagline": "Perisai yang menyembunyikan kerentanan di balik fasad sempurna",
+      "description": "Bayangan Anda adalah kerentanan yang tertekan. Keyakinan bawah sadar bahwa kesalahan menghapus nilai Anda membuat Anda terus berlari di treadmill pengembangan diri tanpa henti. Tapi pertumbuhan sejati dimulai ketika Anda merangkul ketidaksempurnaan. Anda sudah cukup.",
+      "trait1": "Kritik diri",
+      "trait2": "Standar yang terlalu tinggi",
+      "trait3": "Takut gagal",
+      "prompt": "\"Jika saya bisa dicintai bahkan tanpa sempurna, apa yang berani saya coba?\""
+    },
+    "controller": {
+      "name": "The Controller",
+      "tagline": "Benteng yang dibangun di atas kontrol, bukan kepercayaan",
+      "description": "Bayangan Anda adalah kepercayaan dan penyerahan yang tertekan. Ketakutan bawah sadar bahwa melepaskan kendali berarti runtuh membuat Anda terus waspada. Tapi paradoksnya, menerima bahwa Anda tidak bisa mengontrol segalanya adalah saat Anda menemukan stabilitas sejati.",
+      "trait1": "Kebutuhan berlebihan untuk mengontrol",
+      "trait2": "Kesulitan mendelegasikan",
+      "trait3": "Tidak toleran terhadap ketidakpastian",
+      "prompt": "\"Ketika saya benar-benar melepaskan kendali, apa yang terburuk yang terjadi? Apakah itu benar-benar tak tertahankan?\""
+    },
+    "avoider": {
+      "name": "The Avoider",
+      "tagline": "Kabut yang memilih mati rasa yang aman daripada kebenaran yang menyakitkan",
+      "description": "Bayangan Anda adalah rasa sakit dan konfrontasi yang tertekan. Ketakutan bawah sadar bahwa merasakan emosi tidak nyaman akan menghancurkan Anda membuat Anda tetap di zona aman. Tapi tersembunyi dalam hal-hal yang Anda hindari adalah peluang terbesar untuk berkembang.",
+      "trait1": "Mati rasa emosional",
+      "trait2": "Pola penundaan",
+      "trait3": "Menghindari koneksi mendalam",
+      "prompt": "\"Percakapan, emosi, atau keputusan apa yang paling saya hindari? Apa yang saya hilangkan dengan menghindarinya?\""
+    },
+    "rebel": {
+      "name": "The Rebel",
+      "tagline": "Api liar yang memilih kebebasan daripada rasa memiliki",
+      "description": "Bayangan Anda adalah rasa memiliki dan konformitas yang tertekan. Ketakutan bawah sadar bahwa mengikuti aturan berarti kehilangan diri membuat Anda terus melawan. Tapi kebebasan sejati bukan datang dari menentang demi menentang, melainkan dari memilih apa yang benar-benar Anda inginkan.",
+      "trait1": "Menantang otoritas",
+      "trait2": "Kemandirian yang kuat",
+      "trait3": "Keintiman yang terjaga",
+      "prompt": "\"Apakah saya benar-benar menentang ini, atau saya hanya membenci perasaan dikontrol?\""
+    },
+    "caretaker": {
+      "name": "The Caretaker",
+      "tagline": "Kekosongan di balik topeng peduli pada semua orang kecuali diri sendiri",
+      "description": "Bayangan Anda adalah kebutuhan diri yang tertekan. Keyakinan bawah sadar bahwa memprioritaskan diri sendiri adalah egois membuat Anda terus memberi kepada orang lain. Tapi Anda tidak bisa menuangkan dari cangkir yang kosong. Perawatan diri bukan keegoisan — itu adalah kelangsungan hidup.",
+      "trait1": "Pengorbanan diri",
+      "trait2": "Identitas melalui dibutuhkan",
+      "trait3": "Kesulitan menerima bantuan",
+      "prompt": "\"Jika saya tidak punya siapa pun untuk diurus, siapa saya? Apakah identitas saya ada tanpa merawat orang lain?\""
+    }
+  },
+  "share": {
+    "text": "Arketipe bayangan saya adalah '{type}'! Apa sisi tersembunyi Anda?"
+  },
+  "game": {
+    "back": "Beranda DopaBrain"
+  }
+}

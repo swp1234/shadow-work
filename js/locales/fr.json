@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "page_title": "Quiz Travail sur l'Ombre - Rencontrez votre Moi Caché | DopaBrain",
+    "description": "Quelle ombre se cache sous votre surface ? People Pleaser, Perfectionniste, Contrôleur, Éviteur, Rebelle ou Soignant ? 8 questions révèlent votre ombre cachée !",
+    "keywords": "quiz travail sur l'ombre, test du moi ombre, test ombre jungienne, journal travail sur l'ombre, quiz ombre intérieure, test du moi refoulé, quiz psychologie, test découverte de soi, archétype de l'ombre, Carl Jung ombre",
+    "og_title": "Quiz Travail sur l'Ombre - Rencontrez votre Moi Caché",
+    "og_description": "8 questions révèlent votre archétype de l'ombre ! Découvrez quel schéma caché dirige votre comportement.",
+    "twitter_title": "Quiz Travail sur l'Ombre - Rencontrez votre Moi Caché",
+    "twitter_description": "8 questions révèlent votre archétype de l'ombre !"
+  },
+  "app": {
+    "skipLink": "Aller au contenu principal",
+    "loading": "Chargement..."
+  },
+  "intro": {
+    "title": "Quiz Travail sur l'Ombre",
+    "subtitle": "Rencontrez votre Moi Caché",
+    "social_proof": "personnes ont exploré",
+    "feature_types": "6 types d'ombre",
+    "feature_questions": "8 scénarios",
+    "feature_metrics": "5 dimensions d'ombre",
+    "time_estimate": "Prend environ 2 minutes"
+  },
+  "carousel": {
+    "peoplePleaser": "People Pleaser",
+    "perfectionist": "Perfectionniste",
+    "controller": "Contrôleur",
+    "avoider": "Éviteur",
+    "rebel": "Rebelle",
+    "caretaker": "Soignant"
+  },
+  "button": {
+    "start": "Explorez votre Ombre",
+    "retry": "Réessayer",
+    "share_kakao": "KakaoTalk",
+    "share_twitter": "Twitter",
+    "share_facebook": "Facebook",
+    "share_copy": "Copier le lien"
+  },
+  "question": {
+    "0": "Quand un ami considère votre aide comme acquise, quelle est votre première réaction ?",
+    "0a": "Dire que ça va et avaler ma frustration",
+    "0b": "Me reprocher de ne pas avoir fixé de meilleures attentes",
+    "0c": "Poser des conditions pour garder le contrôle de la situation",
+    "0d": "Éviter la conversation et m'en occuper plus tard",
+    "0e": "Exprimer ma frustration directement et fixer une limite",
+    "0f": "Essayer de comprendre leur point de vue tout en me sentant vidé",
+
+    "1": "Après avoir fait une erreur dans une présentation importante, comment gérez-vous ?",
+    "1a": "Faire comme si de rien n'était et espérer que personne ne l'ait remarqué",
+    "1b": "Rejouer l'erreur encore et encore en me critiquant",
+    "1c": "Jurer de me préparer si parfaitement la prochaine fois que ça ne peut pas se reproduire",
+    "1d": "Vouloir éviter les présentations complètement",
+    "1e": "Me rappeler que les erreurs sont normales et passer à autre chose",
+    "1f": "M'inquiéter davantage de ce que les autres ont ressenti que de mes propres sentiments",
+
+    "2": "Quand quelqu'un de proche dit quelque chose de blessant ?",
+    "2a": "Faire comme si ça ne faisait pas mal pour préserver la paix",
+    "2b": "Analyser ce que j'ai fait de mal pour le mériter",
+    "2c": "Essayer de reprendre le dessus dans la relation",
+    "2d": "Prendre mes distances et réduire le contact",
+    "2e": "Leur dire honnêtement qu'ils m'ont blessé",
+    "2f": "Essayer de comprendre leur douleur tout en mettant mes sentiments de côté",
+
+    "3": "Quand un collègue s'attribue le mérite de votre idée dans un projet d'équipe ?",
+    "3a": "Laisser tomber — le conflit n'en vaut pas la peine",
+    "3b": "Essayer de trouver une idée encore meilleure pour me prouver",
+    "3c": "M'assurer de présenter mon propre travail la prochaine fois pour revendiquer le crédit",
+    "3d": "Perdre complètement ma motivation pour les projets d'équipe",
+    "3e": "Prendre la parole immédiatement et clarifier ma contribution",
+    "3f": "Me dire que ce n'est pas grave tant que l'équipe réussit",
+
+    "4": "Quand vous avez du temps libre seul un week-end, quelle est votre première pensée ?",
+    "4a": "Je devrais contacter quelqu'un et faire des plans",
+    "4b": "Je devrais rattraper mon travail ou m'améliorer",
+    "4c": "Planifier et organiser tout pour la semaine à venir",
+    "4d": "Je ne veux rien faire — juste m'allonger",
+    "4e": "Faire ce dont j'ai envie et profiter de la liberté",
+    "4f": "Penser à ce que je pourrais faire pour ma famille ou mes amis",
+
+    "5": "Quand des émotions fortes (colère, tristesse, jalousie) surgissent, quel est votre schéma ?",
+    "5a": "Sourire et faire comme si tout allait bien",
+    "5b": "Me juger comme immature de ressentir cela",
+    "5c": "Trouver la cause et essayer de contrôler la situation",
+    "5d": "Me distraire pour oublier l'émotion",
+    "5e": "Ressentir pleinement l'émotion et l'exprimer authentiquement",
+    "5f": "Me concentrer sur ce que tout le monde ressent au lieu de moi-même",
+
+    "6": "Quand vous recevez des critiques ou des retours négatifs ?",
+    "6a": "Acquiescer avec un sourire tout en m'effondrant intérieurement",
+    "6b": "Jurer de traiter chaque point parfaitement pour ne plus jamais l'entendre",
+    "6c": "Remettre en question l'autorité ou les motivations du critique",
+    "6d": "Mettre ça de côté et me concentrer sur autre chose",
+    "6e": "Accepter ce qui est valable et rejeter ce qui ne l'est pas",
+    "6f": "M'inquiéter de ce que la personne qui donne le retour a ressenti",
+
+    "7": "Tard le soir, en réfléchissant sur vous-même, quelle pensée revient le plus souvent ?",
+    "7a": "J'ai peur que les gens soient déçus s'ils connaissaient mon vrai moi",
+    "7b": "Il y a toujours le sentiment que je ne suis pas assez",
+    "7c": "Ça me rend anxieux de ne pas pouvoir tout contrôler",
+    "7d": "Tout semble épuisant et je veux échapper à cet inconfort",
+    "7e": "J'accepte qui je suis, avec toutes mes imperfections",
+    "7f": "Je m'inquiète de savoir si j'en fais assez pour les gens qui comptent pour moi"
+  },
+  "analyzing": {
+    "title": "Exploration de votre ombre...",
+    "scanning": "Analyse des réponses de l'ombre...",
+    "mapping": "Cartographie des schémas de l'ombre...",
+    "integrating": "Intégration des archétypes...",
+    "complete": "Profil de l'ombre complet !"
+  },
+  "result": {
+    "your_type": "Votre Archétype de l'Ombre",
+    "shadow_dimensions": "Dimensions de l'Ombre",
+    "dimension_scores": "Scores par Dimension",
+    "key_traits": "Schémas de l'Ombre",
+    "journal_prompt": "Invitation au Journal",
+    "percentile": "Seulement {pct} des personnes partagent l'archétype {type}",
+    "moreTests": "Explorer Davantage",
+    "share": "Partagez votre Résultat"
+  },
+  "metric": {
+    "repression": "Répression",
+    "projection": "Projection",
+    "denial": "Déni",
+    "avoidance": "Évitement",
+    "integration": "Intégration"
+  },
+  "type": {
+    "peoplePleaser": {
+      "name": "Le People Pleaser",
+      "tagline": "Un masque qui cache votre vrai moi derrière les attentes des autres",
+      "description": "Votre ombre est la colère et les limites réprimées. Une peur inconsciente que dire 'non' signifie ne pas être aimé vous maintient dans le rôle du 'gentil'. Mais les relations authentiques commencent quand vous montrez vos vraies émotions. Votre colère est un signal qui indique où vos limites doivent être.",
+      "trait1": "Difficulté à poser des limites",
+      "trait2": "Évitement des conflits",
+      "trait3": "Empathie excessive",
+      "prompt": "\"Quand ai-je vraiment dit 'non' pour la dernière fois ? Quelle émotion est apparue quand je l'ai fait ?\""
+    },
+    "perfectionist": {
+      "name": "Le Perfectionniste",
+      "tagline": "Une armure qui cache la vulnérabilité derrière une façade impeccable",
+      "description": "Votre ombre est la vulnérabilité réprimée. Une croyance inconsciente que les erreurs effacent votre valeur vous maintient sur le tapis roulant sans fin de l'amélioration personnelle. Mais la vraie croissance commence quand vous embrassez l'imperfection. Vous êtes déjà suffisant.",
+      "trait1": "Autocritique",
+      "trait2": "Standards impossiblement élevés",
+      "trait3": "Peur de l'échec",
+      "prompt": "\"Si je pouvais être aimé même sans être parfait, qu'oserais-je essayer ?\""
+    },
+    "controller": {
+      "name": "Le Contrôleur",
+      "tagline": "Une forteresse construite sur le contrôle plutôt que la confiance",
+      "description": "Votre ombre est la confiance et l'abandon réprimés. Une peur inconsciente que lâcher prise signifie s'effondrer vous maintient constamment sur vos gardes. Mais paradoxalement, accepter que vous ne pouvez pas tout contrôler est le moment où vous trouvez la vraie stabilité.",
+      "trait1": "Besoin excessif de contrôle",
+      "trait2": "Difficulté à déléguer",
+      "trait3": "Intolérance à l'incertitude",
+      "prompt": "\"Quand j'ai vraiment lâché le contrôle, quelle a été la pire chose qui s'est produite ? Était-ce vraiment insupportable ?\""
+    },
+    "avoider": {
+      "name": "L'Éviteur",
+      "tagline": "Un brouillard qui choisit l'engourdissement sûr plutôt que la vérité douloureuse",
+      "description": "Votre ombre est la douleur et la confrontation réprimées. Une peur inconsciente que ressentir des émotions inconfortables vous brisera vous maintient dans votre zone de sécurité. Mais cachées dans les choses que vous évitez se trouvent vos plus grandes opportunités de croissance.",
+      "trait1": "Engourdissement émotionnel",
+      "trait2": "Schémas de procrastination",
+      "trait3": "Évitement des connexions profondes",
+      "prompt": "\"Quelle conversation, émotion ou décision j'évite le plus ? Qu'est-ce que je perds en l'évitant ?\""
+    },
+    "rebel": {
+      "name": "Le Rebelle",
+      "tagline": "Une flamme sauvage qui choisit la liberté plutôt que l'appartenance",
+      "description": "Votre ombre est l'appartenance et la conformité réprimées. Une peur inconsciente que suivre les règles signifie se perdre vous maintient en résistance constante. Mais la vraie liberté ne vient pas de s'opposer pour s'opposer, mais de choisir ce que vous voulez vraiment.",
+      "trait1": "Défier l'autorité",
+      "trait2": "Indépendance farouche",
+      "trait3": "Intimité gardée",
+      "prompt": "\"Suis-je vraiment contre cela, ou est-ce que je déteste simplement le sentiment d'être contrôlé ?\""
+    },
+    "caretaker": {
+      "name": "Le Soignant",
+      "tagline": "Un vide derrière le masque de prendre soin de tout le monde sauf de soi-même",
+      "description": "Votre ombre est les besoins personnels réprimés. Une croyance inconsciente que se prioriser est égoïste vous maintient à donner sans fin aux autres. Mais vous ne pouvez pas verser d'une tasse vide. Prendre soin de soi n'est pas de l'égoïsme — c'est la survie.",
+      "trait1": "Sacrifice de soi",
+      "trait2": "Identité par le fait d'être nécessaire",
+      "trait3": "Difficulté à accepter de l'aide",
+      "prompt": "\"Si je n'avais personne dont prendre soin, qui serais-je ? Mon identité existe-t-elle sans prendre soin des autres ?\""
+    }
+  },
+  "share": {
+    "text": "Mon archétype de l'ombre est '{type}' ! Quel est votre moi caché ?"
+  },
+  "game": {
+    "back": "Accueil DopaBrain"
+  }
+}

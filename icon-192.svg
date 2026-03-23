@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1030"/>
+      <stop offset="100%" style="stop-color:#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="40" fill="url(#bg)"/>
+  <!-- Mirror frame -->
+  <ellipse cx="96" cy="88" rx="42" ry="50" fill="none" stroke="url(#glow)" stroke-width="4" opacity="0.8"/>
+  <!-- Face silhouette (light side) -->
+  <path d="M 82 72 Q 86 62 96 60 Q 96 62 96 120 Q 86 118 82 108 Q 78 98 78 88 Q 78 78 82 72" fill="#a78bfa" opacity="0.6"/>
+  <!-- Shadow silhouette (dark side) -->
+  <path d="M 110 72 Q 106 62 96 60 Q 96 62 96 120 Q 106 118 110 108 Q 114 98 114 88 Q 114 78 110 72" fill="#4c1d95" opacity="0.8"/>
+  <!-- Eye dots -->
+  <circle cx="88" cy="82" r="2.5" fill="#c4b5fd"/>
+  <circle cx="104" cy="82" r="2.5" fill="#7c3aed"/>
+  <!-- Text -->
+  <text x="96" y="158" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="16" fill="#a78bfa">SHADOW</text>
+  <text x="96" y="174" text-anchor="middle" font-family="sans-serif" font-weight="400" font-size="12" fill="#8b5cf6">WORK</text>
+</svg>

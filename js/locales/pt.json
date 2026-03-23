@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "page_title": "Quiz de Trabalho de Sombra - Conheça Seu Eu Oculto | DopaBrain",
+    "description": "Que eu sombra espreita sob sua superfície? Agradar Pessoas, Perfeccionista, Controlador, Evitador, Rebelde ou Cuidador? 8 perguntas revelam sua sombra oculta!",
+    "keywords": "quiz trabalho de sombra, teste do eu sombra, teste sombra junguiana, diário trabalho de sombra, quiz sombra interior, teste do eu reprimido, quiz de psicologia, teste de autoconhecimento, arquétipo de sombra, Carl Jung sombra",
+    "og_title": "Quiz de Trabalho de Sombra - Conheça Seu Eu Oculto",
+    "og_description": "8 perguntas revelam seu arquétipo de sombra! Descubra qual padrão oculto impulsiona seu comportamento.",
+    "twitter_title": "Quiz de Trabalho de Sombra - Conheça Seu Eu Oculto",
+    "twitter_description": "8 perguntas revelam seu arquétipo de sombra!"
+  },
+  "app": {
+    "skipLink": "Pular para o conteúdo",
+    "loading": "Carregando..."
+  },
+  "intro": {
+    "title": "Quiz de Trabalho de Sombra",
+    "subtitle": "Conheça Seu Eu Oculto",
+    "social_proof": "pessoas exploraram",
+    "feature_types": "6 tipos de sombra",
+    "feature_questions": "8 cenários",
+    "feature_metrics": "5 dimensões de sombra",
+    "time_estimate": "Leva cerca de 2 minutos"
+  },
+  "carousel": {
+    "peoplePleaser": "Agradar Pessoas",
+    "perfectionist": "Perfeccionista",
+    "controller": "Controlador",
+    "avoider": "Evitador",
+    "rebel": "Rebelde",
+    "caretaker": "Cuidador"
+  },
+  "button": {
+    "start": "Explore Sua Sombra",
+    "retry": "Tentar Novamente",
+    "share_kakao": "KakaoTalk",
+    "share_twitter": "Twitter",
+    "share_facebook": "Facebook",
+    "share_copy": "Copiar Link"
+  },
+  "question": {
+    "0": "Quando um amigo considera sua ajuda como garantida, qual é sua primeira reação?",
+    "0a": "Dizer que está tudo bem e engolir minha frustração",
+    "0b": "Me culpar por não estabelecer melhores expectativas",
+    "0c": "Definir condições para manter o controle da situação",
+    "0d": "Evitar a conversa e lidar com isso depois",
+    "0e": "Expressar minha frustração diretamente e estabelecer um limite",
+    "0f": "Tentar entender a perspectiva deles enquanto me sinto esgotado",
+
+    "1": "Depois de cometer um erro em uma apresentação importante, como você lida?",
+    "1a": "Fingir que nada aconteceu e esperar que ninguém tenha notado",
+    "1b": "Reviver o erro repetidamente, me criticando",
+    "1c": "Jurar me preparar tão perfeitamente da próxima vez que não possa acontecer novamente",
+    "1d": "Querer evitar apresentações completamente",
+    "1e": "Lembrar a mim mesmo que erros são normais e seguir em frente",
+    "1f": "Me preocupar mais com como os outros se sentiram do que com meus próprios sentimentos",
+
+    "2": "Quando alguém próximo a você diz algo machucador?",
+    "2a": "Fingir que não doeu para manter a paz",
+    "2b": "Analisar o que fiz de errado para merecer isso",
+    "2c": "Tentar recuperar a vantagem no relacionamento",
+    "2d": "Me afastar e reduzir o contato",
+    "2e": "Dizer honestamente que eles me machucaram",
+    "2f": "Tentar entender a dor deles enquanto deixo meus sentimentos de lado",
+
+    "3": "Quando um colega leva o crédito pela sua ideia em um projeto em equipe?",
+    "3a": "Deixar passar — o conflito não vale a pena",
+    "3b": "Tentar criar algo ainda melhor para provar meu valor",
+    "3c": "Garantir que eu apresente meu próprio trabalho da próxima vez para reivindicar o crédito",
+    "3d": "Perder toda a motivação para projetos em equipe",
+    "3e": "Falar imediatamente e esclarecer minha contribuição",
+    "3f": "Dizer a mim mesmo que está tudo bem contanto que a equipe tenha sucesso",
+
+    "4": "Quando você tem tempo livre sozinho em um fim de semana, qual é seu primeiro pensamento?",
+    "4a": "Deveria entrar em contato com alguém e fazer planos",
+    "4b": "Deveria me atualizar com trabalho ou autoaperfeiçoamento",
+    "4c": "Planejar e organizar tudo para a semana que vem",
+    "4d": "Não quero fazer nada — só deitar",
+    "4e": "Fazer o que eu quiser e aproveitar a liberdade",
+    "4f": "Pensar no que eu poderia fazer pela minha família ou amigos",
+
+    "5": "Quando emoções fortes (raiva, tristeza, ciúme) surgem, qual é seu padrão?",
+    "5a": "Sorrir e agir como se nada estivesse errado",
+    "5b": "Me julgar como imaturo por me sentir assim",
+    "5c": "Encontrar a causa e tentar controlar a situação",
+    "5d": "Me distrair para esquecer a emoção",
+    "5e": "Sentir a emoção plenamente e expressá-la autenticamente",
+    "5f": "Focar em como todos os outros estão se sentindo em vez de em mim",
+
+    "6": "Quando você recebe críticas ou feedback negativo?",
+    "6a": "Concordar com um sorriso enquanto desmorono por dentro",
+    "6b": "Jurar abordar cada ponto perfeitamente para nunca mais ouvir isso",
+    "6c": "Questionar a autoridade ou motivos do crítico",
+    "6d": "Deixar de lado e focar em outra coisa",
+    "6e": "Aceitar o que é válido e descartar o que não é",
+    "6f": "Me preocupar com como a pessoa que deu o feedback se sentiu",
+
+    "7": "Tarde da noite, refletindo sobre si mesmo, qual pensamento surge mais?",
+    "7a": "Tenho medo de que as pessoas ficariam desapontadas se conhecessem meu verdadeiro eu",
+    "7b": "Sempre há uma sensação de que não sou suficiente",
+    "7c": "Me deixa ansioso que não posso controlar tudo",
+    "7d": "Tudo parece exaustivo e quero escapar desse desconforto",
+    "7e": "Me aceito como sou, imperfeições e tudo",
+    "7f": "Me preocupo se estou fazendo o suficiente pelas pessoas que me importam"
+  },
+  "analyzing": {
+    "title": "Explorando sua sombra...",
+    "scanning": "Escaneando respostas de sombra...",
+    "mapping": "Mapeando padrões de sombra...",
+    "integrating": "Integrando arquétipos...",
+    "complete": "Perfil de sombra completo!"
+  },
+  "result": {
+    "your_type": "Seu Arquétipo de Sombra",
+    "shadow_dimensions": "Dimensões de Sombra",
+    "dimension_scores": "Pontuações de Dimensões",
+    "key_traits": "Padrões de Sombra",
+    "journal_prompt": "Reflexão para seu Diário",
+    "percentile": "Apenas {pct} das pessoas compartilham o arquétipo {type}",
+    "moreTests": "Explorar Mais",
+    "share": "Compartilhe Seu Resultado"
+  },
+  "metric": {
+    "repression": "Repressão",
+    "projection": "Projeção",
+    "denial": "Negação",
+    "avoidance": "Evitação",
+    "integration": "Integração"
+  },
+  "type": {
+    "peoplePleaser": {
+      "name": "O Agradar Pessoas",
+      "tagline": "Uma máscara que esconde seu verdadeiro eu atrás das expectativas dos outros",
+      "description": "Sua sombra é raiva e limites reprimidos. Um medo inconsciente de que dizer 'não' significa não ser amado mantém você interpretando o papel de 'pessoa legal'. Mas relacionamentos autênticos começam quando você mostra suas emoções reais. Sua raiva é um sinal apontando para onde seus limites precisam estar.",
+      "trait1": "Dificuldade em estabelecer limites",
+      "trait2": "Evitação de conflitos",
+      "trait3": "Empatia excessiva",
+      "prompt": "\"Quando foi a última vez que eu genuinamente disse 'não'? Que emoção surgiu quando fiz isso?\""
+    },
+    "perfectionist": {
+      "name": "O Perfeccionista",
+      "tagline": "Uma armadura que esconde vulnerabilidade atrás de uma fachada impecável",
+      "description": "Sua sombra é vulnerabilidade reprimida. Uma crença inconsciente de que erros apagam seu valor mantém você na interminável esteira de autoaperfeiçoamento. Mas o verdadeiro crescimento começa quando você abraça a imperfeição. Você já é suficiente.",
+      "trait1": "Autocrítica",
+      "trait2": "Padrões impossivelmente altos",
+      "trait3": "Medo do fracasso",
+      "prompt": "\"Se eu pudesse ser amado mesmo sem ser perfeito, o que eu ousaria tentar?\""
+    },
+    "controller": {
+      "name": "O Controlador",
+      "tagline": "Uma fortaleza construída sobre controle em vez de confiança",
+      "description": "Sua sombra é confiança e entrega reprimidas. Um medo inconsciente de que soltar o controle significa desmoronar mantém você constantemente em guarda. Mas paradoxalmente, aceitar que você não pode controlar tudo é quando você encontra verdadeira estabilidade.",
+      "trait1": "Necessidade excessiva de controle",
+      "trait2": "Dificuldade em delegar",
+      "trait3": "Intolerância à incerteza",
+      "prompt": "\"Quando eu realmente soltei o controle, qual foi o pior que aconteceu? Foi realmente insuportável?\""
+    },
+    "avoider": {
+      "name": "O Evitador",
+      "tagline": "Uma névoa que escolhe torpor seguro em vez de verdade dolorosa",
+      "description": "Sua sombra é dor e confronto reprimidos. Um medo inconsciente de que sentir emoções desconfortáveis vai quebrá-lo mantém você em sua zona segura. Mas escondidas nas coisas que você evita estão suas maiores oportunidades de crescimento.",
+      "trait1": "Torpor emocional",
+      "trait2": "Padrões de procrastinação",
+      "trait3": "Evitação de conexão profunda",
+      "prompt": "\"Qual conversa, emoção ou decisão estou mais evitando? O que estou perdendo ao evitar isso?\""
+    },
+    "rebel": {
+      "name": "O Rebelde",
+      "tagline": "Uma chama selvagem que escolhe liberdade em vez de pertencimento",
+      "description": "Sua sombra é pertencimento e conformidade reprimidos. Um medo inconsciente de que seguir regras significa perder a si mesmo mantém você em constante resistência. Mas a verdadeira liberdade não vem de se opor pelo prazer de se opor, mas de escolher o que você genuinamente quer.",
+      "trait1": "Desafiar autoridade",
+      "trait2": "Independência feroz",
+      "trait3": "Intimidade guardada",
+      "prompt": "\"Eu estou realmente contra isso, ou apenas odeio a sensação de ser controlado?\""
+    },
+    "caretaker": {
+      "name": "O Cuidador",
+      "tagline": "Um vazio por trás da máscara de cuidar de todos menos de si mesmo",
+      "description": "Sua sombra é necessidades próprias reprimidas. Uma crença inconsciente de que priorizar a si mesmo é egoísta mantém você dando infinitamente aos outros. Mas você não pode despejar de um copo vazio. Autocuidado não é egoísmo — é sobrevivência.",
+      "trait1": "Autossacrifício",
+      "trait2": "Identidade através de ser necessário",
+      "trait3": "Dificuldade em aceitar ajuda",
+      "prompt": "\"Se eu não tivesse ninguém para cuidar, quem eu seria? Minha identidade existe sem cuidar?\""
+    }
+  },
+  "share": {
+    "text": "Meu arquétipo de sombra é '{type}'! Qual é seu eu oculto?"
+  },
+  "game": {
+    "back": "Início DopaBrain"
+  }
+}

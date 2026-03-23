@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "page_title": "Schattenarbeit-Quiz - Begegne deinem verborgenen Selbst | DopaBrain",
+    "description": "Welches Schatten-Selbst lauert unter deiner Oberfläche? People Pleaser, Perfektionist, Kontrolleur, Vermeider, Rebell oder Betreuer? 8 Fragen enthüllen deinen verborgenen Schatten!",
+    "keywords": "Schattenarbeit-Quiz, Schatten-Selbst-Test, Jung Schatten-Test, Schattenarbeit-Tagebuch, innerer Schatten-Quiz, unterdrücktes Selbst-Test, Psychologie-Quiz, Selbstentdeckungstest, Schatten-Archetyp, Carl Jung Schatten",
+    "og_title": "Schattenarbeit-Quiz - Begegne deinem verborgenen Selbst",
+    "og_description": "8 Fragen enthüllen deinen Schatten-Archetyp! Entdecke, welches verborgene Muster dein Verhalten steuert.",
+    "twitter_title": "Schattenarbeit-Quiz - Begegne deinem verborgenen Selbst",
+    "twitter_description": "8 Fragen enthüllen deinen Schatten-Archetyp!"
+  },
+  "app": {
+    "skipLink": "Zum Hauptinhalt springen",
+    "loading": "Lädt..."
+  },
+  "intro": {
+    "title": "Schattenarbeit-Quiz",
+    "subtitle": "Begegne deinem verborgenen Selbst",
+    "social_proof": "Menschen haben es ausprobiert",
+    "feature_types": "6 Schattentypen",
+    "feature_questions": "8 Szenarien",
+    "feature_metrics": "5 Schattendimensionen",
+    "time_estimate": "Dauert etwa 2 Minuten"
+  },
+  "carousel": {
+    "peoplePleaser": "People Pleaser",
+    "perfectionist": "Perfektionist",
+    "controller": "Kontrolleur",
+    "avoider": "Vermeider",
+    "rebel": "Rebell",
+    "caretaker": "Betreuer"
+  },
+  "button": {
+    "start": "Erkunde deinen Schatten",
+    "retry": "Erneut versuchen",
+    "share_kakao": "KakaoTalk",
+    "share_twitter": "Twitter",
+    "share_facebook": "Facebook",
+    "share_copy": "Link kopieren"
+  },
+  "question": {
+    "0": "Wenn ein Freund deine Hilfe als selbstverständlich nimmt, was ist deine erste Reaktion?",
+    "0a": "Sage, es ist in Ordnung, und schlucke meine Frustration hinunter",
+    "0b": "Gebe mir selbst die Schuld, keine besseren Erwartungen gesetzt zu haben",
+    "0c": "Setze Bedingungen, damit ich die Kontrolle über die Situation behalte",
+    "0d": "Vermeide das Gespräch und kümmere mich später darum",
+    "0e": "Drücke meine Frustration direkt aus und setze eine Grenze",
+    "0f": "Versuche ihre Perspektive zu verstehen, während ich mich ausgelaugt fühle",
+
+    "1": "Nachdem du einen Fehler in einer wichtigen Präsentation gemacht hast, wie gehst du damit um?",
+    "1a": "Tue so, als wäre nichts passiert, und hoffe, dass es niemand bemerkt hat",
+    "1b": "Spiele den Fehler immer wieder ab und kritisiere mich selbst",
+    "1c": "Schwöre mir, mich beim nächsten Mal so perfekt vorzubereiten, dass es nicht wieder passieren kann",
+    "1d": "Möchte Präsentationen überhaupt vermeiden",
+    "1e": "Erinnere mich daran, dass Fehler okay sind, und mache weiter",
+    "1f": "Sorge mich mehr darum, wie sich andere gefühlt haben, als um meine eigenen Gefühle",
+
+    "2": "Wenn jemand, der dir nahesteht, etwas Verletzendes sagt?",
+    "2a": "Tue so, als hätte es nicht wehgetan, um den Frieden zu bewahren",
+    "2b": "Analysiere, was ich falsch gemacht habe, um es zu verdienen",
+    "2c": "Versuche, in der Beziehung wieder die Oberhand zu gewinnen",
+    "2d": "Ziehe mich zurück und reduziere den Kontakt",
+    "2e": "Sage ihnen ehrlich, dass sie mich verletzt haben",
+    "2f": "Versuche ihren Schmerz zu verstehen, während ich meine eigenen Gefühle beiseite lege",
+
+    "3": "Wenn ein Kollege bei einem Teamprojekt die Lorbeeren für deine Idee einstreicht?",
+    "3a": "Lasse es sein — der Konflikt ist es nicht wert",
+    "3b": "Versuche, eine noch bessere Idee zu entwickeln, um mich zu beweisen",
+    "3c": "Stelle sicher, dass ich beim nächsten Mal meine eigene Arbeit präsentiere, um die Anerkennung zu bekommen",
+    "3d": "Verliere die Motivation für Teamprojekte völlig",
+    "3e": "Spreche sofort an und kläre meinen Beitrag",
+    "3f": "Sage mir selbst, es ist in Ordnung, solange das Team erfolgreich ist",
+
+    "4": "Wenn du an einem Wochenende freie Zeit allein hast, was ist dein erster Gedanke?",
+    "4a": "Ich sollte jemanden kontaktieren und Pläne machen",
+    "4b": "Ich sollte Arbeit aufholen oder an meiner Selbstverbesserung arbeiten",
+    "4c": "Plane und organisiere alles für die kommende Woche",
+    "4d": "Ich will nichts tun — einfach nur rumliegen",
+    "4e": "Mache, worauf ich Lust habe, und genieße die Freiheit",
+    "4f": "Denke darüber nach, was ich für meine Familie oder Freunde tun könnte",
+
+    "5": "Wenn starke Emotionen (Wut, Traurigkeit, Eifersucht) aufkommen, was ist dein Muster?",
+    "5a": "Lächle und tue so, als wäre alles in Ordnung",
+    "5b": "Verurteile mich selbst als unreif, weil ich so fühle",
+    "5c": "Finde die Ursache und versuche, die Situation zu kontrollieren",
+    "5d": "Lenke mich ab, um die Emotion zu vergessen",
+    "5e": "Fühle die Emotion vollständig und drücke sie authentisch aus",
+    "5f": "Konzentriere mich darauf, wie sich alle anderen fühlen, anstatt auf mich selbst",
+
+    "6": "Wenn du Kritik oder negatives Feedback erhältst?",
+    "6a": "Stimme lächelnd zu, während ich innerlich zusammenbreche",
+    "6b": "Schwöre mir, jeden Punkt perfekt anzugehen, damit ich es nie wieder höre",
+    "6c": "Hinterfrage die Autorität oder die Motive des Kritikers",
+    "6d": "Schiebe es beiseite und konzentriere mich auf etwas anderes",
+    "6e": "Akzeptiere, was berechtigt ist, und weise zurück, was nicht zutrifft",
+    "6f": "Sorge mich darum, wie sich die Person gefühlt hat, die das Feedback gibt",
+
+    "7": "Spät in der Nacht, wenn du über dich selbst nachdenkst, welcher Gedanke kommt am häufigsten auf?",
+    "7a": "Ich habe Angst, dass die Leute enttäuscht wären, wenn sie mein wahres Ich kennen würden",
+    "7b": "Es gibt immer das Gefühl, dass ich nicht genug bin",
+    "7c": "Es macht mich ängstlich, dass ich nicht alles kontrollieren kann",
+    "7d": "Alles fühlt sich erschöpfend an und ich möchte diesem Unbehagen entkommen",
+    "7e": "Ich akzeptiere mich so, wie ich bin, mit all meinen Unvollkommenheiten",
+    "7f": "Ich sorge mich, ob ich genug für die Menschen tue, die mir wichtig sind"
+  },
+  "analyzing": {
+    "title": "Erkunde deinen Schatten...",
+    "scanning": "Scanne Schattenantworten...",
+    "mapping": "Kartiere Schattenmuster...",
+    "integrating": "Integriere Archetypen...",
+    "complete": "Schattenprofil vollständig!"
+  },
+  "result": {
+    "your_type": "Dein Schatten-Archetyp",
+    "shadow_dimensions": "Schattendimensionen",
+    "dimension_scores": "Dimensionswerte",
+    "key_traits": "Schattenmuster",
+    "journal_prompt": "Tagebuch-Impuls",
+    "percentile": "Nur {pct} der Menschen teilen den {type}-Archetyp",
+    "moreTests": "Mehr erkunden",
+    "share": "Teile dein Ergebnis"
+  },
+  "metric": {
+    "repression": "Unterdrückung",
+    "projection": "Projektion",
+    "denial": "Verleugnung",
+    "avoidance": "Vermeidung",
+    "integration": "Integration"
+  },
+  "type": {
+    "peoplePleaser": {
+      "name": "Der People Pleaser",
+      "tagline": "Eine Maske, die dein wahres Ich hinter den Erwartungen anderer verbirgt",
+      "description": "Dein Schatten ist unterdrückte Wut und fehlende Grenzen. Eine unbewusste Angst, dass ‚Nein' sagen bedeutet, nicht geliebt zu werden, hält dich in der Rolle des ‚Netten'. Aber authentische Beziehungen beginnen, wenn du deine wahren Emotionen zeigst. Deine Wut ist ein Signal, das darauf hinweist, wo deine Grenzen sein müssen.",
+      "trait1": "Schwierigkeit, Grenzen zu setzen",
+      "trait2": "Konfliktvermeidung",
+      "trait3": "Übermäßiges Einfühlungsvermögen",
+      "prompt": "\"Wann habe ich das letzte Mal wirklich ‚Nein' gesagt? Welche Emotion kam auf, als ich es tat?\""
+    },
+    "perfectionist": {
+      "name": "Der Perfektionist",
+      "tagline": "Eine Rüstung, die Verletzlichkeit hinter einer makellosen Fassade verbirgt",
+      "description": "Dein Schatten ist unterdrückte Verletzlichkeit. Eine unbewusste Überzeugung, dass Fehler deinen Wert auslöschen, hält dich auf dem endlosen Laufband der Selbstverbesserung. Aber echtes Wachstum beginnt, wenn du Unvollkommenheit umarmst. Du bist bereits genug.",
+      "trait1": "Selbstkritik",
+      "trait2": "Unmöglich hohe Standards",
+      "trait3": "Angst vor Versagen",
+      "prompt": "\"Wenn ich auch ohne perfekt zu sein geliebt werden könnte, was würde ich wagen zu versuchen?\""
+    },
+    "controller": {
+      "name": "Der Kontrolleur",
+      "tagline": "Eine Festung, die auf Kontrolle statt auf Vertrauen gebaut ist",
+      "description": "Dein Schatten ist unterdrücktes Vertrauen und Hingabe. Eine unbewusste Angst, dass Loslassen Zusammenbruch bedeutet, hält dich ständig auf der Hut. Aber paradoxerweise findest du wahre Stabilität, wenn du akzeptierst, dass du nicht alles kontrollieren kannst.",
+      "trait1": "Übermäßiges Kontrollbedürfnis",
+      "trait2": "Schwierigkeit zu delegieren",
+      "trait3": "Intoleranz gegenüber Unsicherheit",
+      "prompt": "\"Als ich tatsächlich die Kontrolle losließ, was war das Schlimmste, was passierte? War es wirklich unerträglich?\""
+    },
+    "avoider": {
+      "name": "Der Vermeider",
+      "tagline": "Ein Nebel, der sichere Taubheit der schmerzhaften Wahrheit vorzieht",
+      "description": "Dein Schatten ist unterdrückter Schmerz und Konfrontation. Eine unbewusste Angst, dass das Fühlen unangenehmer Emotionen dich zerbricht, hält dich in deiner sicheren Zone. Aber verborgen in den Dingen, die du vermeidest, liegen deine größten Wachstumschancen.",
+      "trait1": "Emotionale Taubheit",
+      "trait2": "Prokrastinationsmuster",
+      "trait3": "Vermeidung tiefer Verbindungen",
+      "prompt": "\"Welches Gespräch, welche Emotion oder welche Entscheidung vermeide ich am meisten? Was verliere ich, indem ich es vermeide?\""
+    },
+    "rebel": {
+      "name": "Der Rebell",
+      "tagline": "Eine wilde Flamme, die Freiheit über Zugehörigkeit wählt",
+      "description": "Dein Schatten ist unterdrückte Zugehörigkeit und Konformität. Eine unbewusste Angst, dass das Befolgen von Regeln bedeutet, dich selbst zu verlieren, hält dich in ständigem Widerstand. Aber wahre Freiheit kommt nicht vom Opponieren um des Opponierens willen, sondern vom Wählen dessen, was du wirklich willst.",
+      "trait1": "Autorität herausfordern",
+      "trait2": "Starke Unabhängigkeit",
+      "trait3": "Bewachte Intimität",
+      "prompt": "\"Bin ich wirklich dagegen, oder hasse ich nur das Gefühl, kontrolliert zu werden?\""
+    },
+    "caretaker": {
+      "name": "Der Betreuer",
+      "tagline": "Eine Leere hinter der Maske, sich um alle außer sich selbst zu kümmern",
+      "description": "Dein Schatten sind unterdrückte Eigenbedürfnisse. Eine unbewusste Überzeugung, dass Selbstpriorisierung egoistisch ist, hält dich endlos dabei, anderen zu geben. Aber du kannst nicht aus einem leeren Becher gießen. Selbstfürsorge ist kein Egoismus — es ist Überleben.",
+      "trait1": "Selbstaufopferung",
+      "trait2": "Identität durch Gebrauchtwerden",
+      "trait3": "Schwierigkeit, Hilfe anzunehmen",
+      "prompt": "\"Wenn ich niemanden hätte, um den ich mich kümmern müsste, wer wäre ich? Existiert meine Identität ohne Fürsorge?\""
+    }
+  },
+  "share": {
+    "text": "Mein Schatten-Archetyp ist '{type}'! Was ist dein verborgenes Selbst?"
+  },
+  "game": {
+    "back": "DopaBrain Startseite"
+  }
+}
