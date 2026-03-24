@@ -165,6 +165,9 @@ class ShadowWorkApp {
 
         if (typeof gtag === 'function') {
             gtag('event', 'page_view', { page_title: 'Shadow Work Quiz' });
+            setTimeout(() => {
+                gtag('event', 'page_engage', { event_category: 'shadow_work', engagement_time_msec: 5000 });
+            }, 5000);
         }
     }
 
