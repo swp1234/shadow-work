@@ -13,6 +13,11 @@ try {
     }
 
     I18n.prototype.detectLanguage = function() {
+        try {
+            var params = new URLSearchParams(window.location.search || '');
+            var urlLang = params.get('lang');
+            if (urlLang && SUPPORTED.indexOf(urlLang) !== -1) return urlLang;
+        } catch (e) {}
         var saved = localStorage.getItem('preferredLanguage');
         if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
         var browser = (navigator.language || '').split('-')[0].toLowerCase();
@@ -72,6 +77,7 @@ try {
 
     I18n.prototype.updateUI = function() {
         var self = this;
+        document.documentElement.lang = this.currentLang;
         document.querySelectorAll('[data-i18n]').forEach(function(el) {
             var key = el.getAttribute('data-i18n');
             var text = self.t(key);
