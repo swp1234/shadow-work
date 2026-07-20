@@ -146,6 +146,10 @@ class ShadowWorkApp {
         this.typeScores = [0, 0, 0, 0, 0, 0];
         this.dimScores = [0, 0, 0, 0, 0];
         this.resultType = null;
+        this.entrySurface = new URLSearchParams(window.location.search).get('surface') || 'direct';
+        this.autoStartConsumed = false;
+        this.resultViewTracked = false;
+        this.resultAdLoaded = false;
         this.init();
     }
 
@@ -157,6 +161,7 @@ class ShadowWorkApp {
         this.bindEvents();
         this.initTheme();
         this.hideLoader();
+        this.initializeBaseAds();
 
         if (typeof DailyStreak !== 'undefined') { DailyStreak.init(); }
         if (typeof GameAchievements !== 'undefined') { GameAchievements.init(); }
@@ -169,11 +174,13 @@ class ShadowWorkApp {
                 gtag('event', 'page_engage', { event_category: 'shadow_work', engagement_time_msec: 5000 });
             }, 5000);
         }
+
+        this.tryAutoStart();
     }
 
     bindEvents() {
         const startBtn = document.getElementById('start-btn');
-        if (startBtn) startBtn.addEventListener('click', () => this.startQuiz());
+        if (startBtn) startBtn.addEventListener('click', () => this.startQuiz('intro_button'));
 
         const retryBtn = document.getElementById('retry-btn');
         if (retryBtn) retryBtn.addEventListener('click', () => this.restart());
@@ -244,17 +251,46 @@ class ShadowWorkApp {
         if (screen) screen.classList.add('active');
     }
 
-    startQuiz() {
+    trackEvent(name, params = {}) {
+        if (typeof gtag !== 'function') return;
+        gtag('event', name, Object.assign({
+            event_category: 'shadow_work',
+            entry_surface: this.entrySurface
+        }, params));
+    }
+
+    initializeBaseAds() {
+        if (window.location.protocol === 'file:') return;
+        document.querySelectorAll('#shadow-ad-top ins.adsbygoogle, #shadow-ad-bottom ins.adsbygoogle').forEach((adNode) => {
+            if (adNode.dataset.adsbygoogleStatus) return;
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (error) {
+                // Ad blockers or delayed AdSense init must not interrupt the quiz.
+            }
+        });
+    }
+
+    tryAutoStart() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('start') !== '1' || this.autoStartConsumed) return;
+        this.autoStartConsumed = true;
+        this.trackEvent('shadow_work_auto_start', { cta_surface: this.entrySurface });
+        requestAnimationFrame(() => this.startQuiz('auto_start'));
+    }
+
+    startQuiz(trigger = 'intro_button') {
         this.currentQuestion = 0;
         this.answers = [];
         this.typeScores = [0, 0, 0, 0, 0, 0];
         this.dimScores = [0, 0, 0, 0, 0];
+        this.resultViewTracked = false;
         this.showScreen('question-screen');
         this.renderQuestion();
 
-        if (typeof gtag === 'function') {
-            gtag('event', 'quiz_start', { event_category: 'shadow_work' });
-        }
+        const eventParams = { cta_surface: this.entrySurface, start_trigger: trigger };
+        this.trackEvent('quiz_start', eventParams);
+        this.trackEvent('test_start', eventParams);
     }
 
     renderQuestion() {
@@ -507,14 +543,44 @@ class ShadowWorkApp {
         if (journalText) journalText.textContent = t(type.promptKey);
 
         this.spawnConfetti();
+        this.ensureResultAdLoaded();
 
-        if (typeof gtag === 'function') {
-            gtag('event', 'quiz_complete', {
-                event_category: 'shadow_work',
+        if (!this.resultViewTracked) {
+            const resultParams = {
                 event_label: type.id,
+                result_type: type.id,
+                cta_surface: this.entrySurface,
                 value: 1
-            });
+            };
+            this.trackEvent('quiz_complete', resultParams);
+            this.trackEvent('test_complete', resultParams);
+            this.trackEvent('result_view', resultParams);
+            this.trackEvent('shadow_work_result_view', resultParams);
+            this.resultViewTracked = true;
         }
+    }
+
+    ensureResultAdLoaded() {
+        if (this.resultAdLoaded) return;
+        const adSlot = document.getElementById('shadow-result-ad');
+        const adNode = adSlot ? adSlot.querySelector('ins.adsbygoogle') : null;
+        if (!adSlot || !adNode) return;
+
+        adSlot.dataset.loaded = 'true';
+        this.resultAdLoaded = true;
+        if (window.location.protocol !== 'file:') {
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (error) {
+                adSlot.dataset.loaded = 'error';
+            }
+        }
+
+        this.trackEvent('shadow_work_result_ad_impression', {
+            cta_surface: this.entrySurface,
+            ad_surface: adSlot.getAttribute('data-ad-surface') || 'shadow_work_result',
+            ad_slot: adNode.getAttribute('data-ad-slot') || 'auto'
+        });
     }
 
     spawnConfetti() {

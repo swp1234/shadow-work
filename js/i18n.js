@@ -44,7 +44,7 @@ try {
                 return data;
             })
             .catch(function(e) {
-                console.error('i18n load error:', e);
+                console.warn('i18n load warning:', e);
                 self.isLoading = false;
                 if (lang !== 'ko') return self.loadTranslations('ko');
             });
