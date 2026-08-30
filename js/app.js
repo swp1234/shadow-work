@@ -260,15 +260,7 @@ class ShadowWorkApp {
     }
 
     initializeBaseAds() {
-        if (window.location.protocol === 'file:') return;
-        document.querySelectorAll('#shadow-ad-top ins.adsbygoogle, #shadow-ad-bottom ins.adsbygoogle').forEach((adNode) => {
-            if (adNode.dataset.adsbygoogleStatus) return;
-            try {
-                (window.adsbygoogle = window.adsbygoogle || []).push({});
-            } catch (error) {
-                // Ad blockers or delayed AdSense init must not interrupt the quiz.
-            }
-        });
+        // Auto Ads owns placement and paid-impression measurement.
     }
 
     tryAutoStart() {
@@ -561,26 +553,7 @@ class ShadowWorkApp {
     }
 
     ensureResultAdLoaded() {
-        if (this.resultAdLoaded) return;
-        const adSlot = document.getElementById('shadow-result-ad');
-        const adNode = adSlot ? adSlot.querySelector('ins.adsbygoogle') : null;
-        if (!adSlot || !adNode) return;
-
-        adSlot.dataset.loaded = 'true';
-        this.resultAdLoaded = true;
-        if (window.location.protocol !== 'file:') {
-            try {
-                (window.adsbygoogle = window.adsbygoogle || []).push({});
-            } catch (error) {
-                adSlot.dataset.loaded = 'error';
-            }
-        }
-
-        this.trackEvent('shadow_work_result_ad_impression', {
-            cta_surface: this.entrySurface,
-            ad_surface: adSlot.getAttribute('data-ad-surface') || 'shadow_work_result',
-            ad_slot: adNode.getAttribute('data-ad-slot') || 'auto'
-        });
+        // Auto Ads owns placement and paid-impression measurement.
     }
 
     spawnConfetti() {
