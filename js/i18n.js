@@ -1,117 +1,32 @@
-// i18n IIFE - wrapped in try-catch to prevent loader freeze
-try {
-(function() {
-    'use strict';
-
-    var SUPPORTED = ['ko', 'en', 'ja', 'zh', 'es', 'pt', 'id', 'tr', 'de', 'fr', 'hi', 'ru'];
-
-    function I18n() {
-        this.translations = {};
-        this.supportedLanguages = SUPPORTED;
-        this.currentLang = this.detectLanguage();
-        this.isLoading = false;
-    }
-
-    I18n.prototype.detectLanguage = function() {
-        try {
-            var params = new URLSearchParams(window.location.search || '');
-            var urlLang = params.get('lang');
-            if (urlLang && SUPPORTED.indexOf(urlLang) !== -1) return urlLang;
-        } catch (e) {}
-        var saved = localStorage.getItem('preferredLanguage');
-        if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
-        var browser = (navigator.language || '').split('-')[0].toLowerCase();
-        if (SUPPORTED.indexOf(browser) !== -1) return browser;
-        return 'ko';
-    };
-
-    I18n.prototype.loadTranslations = function(lang) {
-        var self = this;
-        if (self.isLoading) return Promise.resolve();
-        self.isLoading = true;
-        if (self.translations[lang]) {
-            self.isLoading = false;
-            return Promise.resolve(self.translations[lang]);
-        }
-        return fetch('js/locales/' + lang + '.json')
-            .then(function(res) {
-                if (!res.ok) throw new Error('Failed: ' + lang);
-                return res.json();
-            })
-            .then(function(data) {
-                self.translations[lang] = data;
-                self.isLoading = false;
-                return data;
-            })
-            .catch(function(e) {
-                console.warn('i18n load warning:', e);
-                self.isLoading = false;
-                if (lang !== 'ko') return self.loadTranslations('ko');
-            });
-    };
-
-    I18n.prototype.t = function(key) {
-        var keys = key.split('.');
-        var val = this.translations[this.currentLang];
-        if (!val) return key;
-        for (var i = 0; i < keys.length; i++) {
-            if (val && typeof val === 'object' && keys[i] in val) {
-                val = val[keys[i]];
-            } else {
-                return key;
-            }
-        }
-        return val || key;
-    };
-
-    I18n.prototype.setLanguage = function(lang) {
-        if (SUPPORTED.indexOf(lang) === -1) return Promise.resolve();
-        this.currentLang = lang;
-        localStorage.setItem('preferredLanguage', lang);
-        var self = this;
-        return this.loadTranslations(lang).then(function() {
-            self.updateUI();
-            self.updateLangButtons();
-        });
-    };
-
-    I18n.prototype.updateUI = function() {
-        var self = this;
-        document.documentElement.lang = this.currentLang;
-        document.querySelectorAll('[data-i18n]').forEach(function(el) {
-            var key = el.getAttribute('data-i18n');
-            var text = self.t(key);
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                if (el.placeholder !== undefined) el.placeholder = text;
-            } else if (el.tagName === 'META') {
-                el.setAttribute('content', text);
-            } else {
-                el.textContent = text;
-            }
-        });
-    };
-
-    I18n.prototype.updateLangButtons = function() {
-        var lang = this.currentLang;
-        document.querySelectorAll('.lang-option').forEach(function(btn) {
-            var isActive = btn.getAttribute('data-lang') === lang;
-            if (isActive) btn.classList.add('active');
-            else btn.classList.remove('active');
-        });
-    };
-
-    I18n.prototype.getCurrentLanguage = function() { return this.currentLang; };
-
-    I18n.prototype.init = function() {
-        var self = this;
-        return this.loadTranslations(this.currentLang).then(function() {
-            self.updateUI();
-            self.updateLangButtons();
-        });
-    };
-
-    window.i18n = new I18n();
+(function(){
+  'use strict';
+  var SUPPORTED=['ko','en','zh','hi','ru','ja','es','pt','id','tr','de','fr'];
+  function I18n(){this.translations={};this.supportedLanguages=SUPPORTED;this.currentLang=this.detectLanguage()}
+  I18n.prototype.detectLanguage=function(){
+    try{var urlLang=new URLSearchParams(window.location.search||'').get('lang');if(SUPPORTED.indexOf(urlLang)>-1)return urlLang}catch(error){}
+    var saved=localStorage.getItem('shadow_reflection_language');if(SUPPORTED.indexOf(saved)>-1)return saved;
+    var browser=(navigator.language||'en').split('-')[0].toLowerCase();return SUPPORTED.indexOf(browser)>-1?browser:'en';
+  };
+  I18n.prototype.load=function(lang){
+    var self=this;if(self.translations[lang])return Promise.resolve(true);
+    return fetch('js/locales/'+lang+'.json').then(function(response){if(!response.ok)throw new Error('locale '+lang);return response.json()}).then(function(data){self.translations[lang]=data;return true}).catch(function(error){if(lang!=='en')return self.load('en').then(function(){self.currentLang='en';return false});throw error});
+  };
+  I18n.prototype.t=function(key){
+    var value=this.translations[this.currentLang]||this.translations.en;var parts=key.split('.');
+    for(var i=0;i<parts.length;i++){if(value&&typeof value==='object'&&Object.prototype.hasOwnProperty.call(value,parts[i]))value=value[parts[i]];else return key}
+    return typeof value==='string'?value:key;
+  };
+  I18n.prototype.updateUI=function(){
+    var self=this;document.documentElement.lang=this.currentLang;
+    document.querySelectorAll('[data-i18n]').forEach(function(node){var value=self.t(node.getAttribute('data-i18n'));if(value!==node.getAttribute('data-i18n'))node.textContent=value});
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(node){var value=self.t(node.getAttribute('data-i18n-aria'));if(value!==node.getAttribute('data-i18n-aria'))node.setAttribute('aria-label',value)});
+    var title=this.t('meta.title');if(title!=='meta.title')document.title=title;
+    var description=document.querySelector('meta[name="description"]');var copy=this.t('meta.description');if(description&&copy!=='meta.description')description.content=copy;
+  };
+  I18n.prototype.init=function(){var self=this;return self.load(self.currentLang).then(function(){self.updateUI();return true})};
+  I18n.prototype.setLanguage=function(lang){
+    var self=this;if(SUPPORTED.indexOf(lang)===-1)return Promise.resolve(false);
+    return self.load(lang).then(function(){self.currentLang=lang;localStorage.setItem('shadow_reflection_language',lang);self.updateUI();return true});
+  };
+  window.i18n=new I18n();
 })();
-} catch (e) {
-    console.error('i18n IIFE error:', e);
-}

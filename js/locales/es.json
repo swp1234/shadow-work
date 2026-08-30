@@ -1,100 +1,76 @@
 {
   "meta": {
-    "page_title": "Test de Trabajo de Sombras - Conoce Tu Yo Oculto | DopaBrain",
-    "description": "¿Qué yo sombra acecha bajo tu superficie? ¿Complaciente, Perfeccionista, Controlador, Evitador, Rebelde o Cuidador? 8 preguntas revelan tu sombra oculta!",
-    "keywords": "test trabajo de sombras, test del yo sombra, test sombra junguiana, diario trabajo de sombras, test sombra interior, test del yo reprimido, test de psicología, test de autoconocimiento, arquetipo de sombra, Carl Jung sombra",
-    "og_title": "Test de Trabajo de Sombras - Conoce Tu Yo Oculto",
-    "og_description": "¡8 preguntas revelan tu arquetipo de sombra! Descubre qué patrón oculto impulsa tu comportamiento.",
-    "twitter_title": "Test de Trabajo de Sombras - Conoce Tu Yo Oculto",
-    "twitter_description": "¡8 preguntas revelan tu arquetipo de sombra!"
+    "title": "Reflexión sobre patrones de sombra - 8 situaciones privadas | DopaBrain",
+    "description": "Observa qué dirección de respuesta elegiste más en ocho situaciones privadas. No es una evaluación validada ni un diagnóstico."
   },
-  "app": {
-    "skipLink": "Saltar al contenido",
-    "loading": "Cargando..."
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "theme": "Cambiar tema",
+    "language": "Idioma",
+    "questions": "Situaciones de reflexión"
   },
   "intro": {
-    "title": "Test de Trabajo de Sombras",
-    "subtitle": "Conoce Tu Yo Oculto",
-    "social_proof": "personas exploraron",
-    "feature_types": "6 tipos de sombra",
-    "feature_questions": "8 escenarios",
-    "feature_metrics": "5 dimensiones de sombra",
-    "time_estimate": "Toma unos 2 minutos"
-  },
-  "carousel": {
-    "peoplePleaser": "Complaciente",
-    "perfectionist": "Perfeccionista",
-    "controller": "Controlador",
-    "avoider": "Evitador",
-    "rebel": "Rebelde",
-    "caretaker": "Cuidador"
-  },
-  "button": {
-    "start": "Explora Tu Sombra",
-    "retry": "Intentar Otra Vez",
-    "share_kakao": "KakaoTalk",
-    "share_twitter": "Twitter",
-    "share_facebook": "Facebook",
-    "share_copy": "Copiar Enlace"
+    "badge": "Reflexión privada",
+    "title": "Reflexión sobre patrones de sombra",
+    "subtitle": "¿Qué dirección de respuesta apareció más hoy?",
+    "description": "Elige la respuesta más cercana a tu reacción probable en ocho situaciones cotidianas.",
+    "info_questions": "8 situaciones",
+    "info_time": "Unos 2 min",
+    "info_storage": "Las respuestas quedan en este navegador",
+    "boundary": "La sombra de Jung es un concepto de la psicología analítica. Esta actividad no es una evaluación psicológica validada, diagnóstico, tratamiento o predicción, ni revela un arquetipo inconsciente.",
+    "start": "Iniciar reflexión privada"
   },
   "question": {
     "0": "Cuando un amigo da por sentada tu ayuda, ¿cuál es tu primera reacción?",
+    "1": "Después de cometer un error en una presentación importante, ¿cómo lo enfrentas?",
+    "2": "¿Cuando alguien cercano te dice algo hiriente?",
+    "3": "¿Cuando un colega se atribuye el mérito de tu idea en un proyecto de equipo?",
+    "4": "Cuando tienes tiempo libre a solas un fin de semana, ¿cuál es tu primer pensamiento?",
+    "5": "Cuando surgen emociones intensas (ira, tristeza, celos), ¿cuál es tu patrón?",
+    "6": "¿Cuando recibes críticas o comentarios negativos?",
+    "7": "Tarde en la noche, reflexionando sobre ti mismo, ¿qué pensamiento surge más?",
     "0a": "Decir que está bien y tragar mi frustración",
     "0b": "Culparme por no establecer mejores expectativas",
     "0c": "Poner condiciones para mantener el control de la situación",
     "0d": "Evitar la conversación y lidiar con ello después",
     "0e": "Expresar mi frustración directamente y establecer un límite",
     "0f": "Intentar entender su perspectiva mientras me siento agotado",
-
-    "1": "Después de cometer un error en una presentación importante, ¿cómo lo enfrentas?",
     "1a": "Fingir que no pasó nada y esperar que nadie lo notara",
     "1b": "Revivir el error una y otra vez, criticándome",
     "1c": "Jurar prepararme tan perfectamente la próxima vez que no pueda volver a pasar",
     "1d": "Querer evitar las presentaciones por completo",
     "1e": "Recordarme que los errores están bien y seguir adelante",
     "1f": "Preocuparme más por cómo se sintieron los demás que por mis propios sentimientos",
-
-    "2": "¿Cuando alguien cercano te dice algo hiriente?",
     "2a": "Fingir que no dolió para mantener la paz",
     "2b": "Analizar qué hice mal para merecerlo",
     "2c": "Intentar recuperar la ventaja en la relación",
     "2d": "Alejarme y reducir el contacto",
     "2e": "Decirles honestamente que me lastimaron",
     "2f": "Intentar entender su dolor mientras dejo mis sentimientos a un lado",
-
-    "3": "¿Cuando un colega se atribuye el mérito de tu idea en un proyecto de equipo?",
     "3a": "Dejarlo pasar — el conflicto no vale la pena",
     "3b": "Intentar idear algo aún mejor para demostrar mi valía",
     "3c": "Asegurarme de presentar mi propio trabajo la próxima vez para reclamar el crédito",
     "3d": "Perder toda motivación para los proyectos de equipo",
     "3e": "Hablar inmediatamente y aclarar mi contribución",
     "3f": "Decirme que está bien siempre que el equipo tenga éxito",
-
-    "4": "Cuando tienes tiempo libre a solas un fin de semana, ¿cuál es tu primer pensamiento?",
     "4a": "Debería contactar a alguien y hacer planes",
     "4b": "Debería ponerme al día con el trabajo o automejora",
     "4c": "Planificar y organizar todo para la semana que viene",
     "4d": "No quiero hacer nada — solo acostarme",
     "4e": "Hacer lo que me apetezca y disfrutar de la libertad",
     "4f": "Pensar en qué podría hacer por mi familia o amigos",
-
-    "5": "Cuando surgen emociones intensas (ira, tristeza, celos), ¿cuál es tu patrón?",
     "5a": "Sonreír y actuar como si nada estuviera mal",
     "5b": "Juzgarme como inmaduro por sentirme así",
     "5c": "Encontrar la causa e intentar controlar la situación",
     "5d": "Distraerme para olvidar la emoción",
     "5e": "Sentir la emoción plenamente y expresarla auténticamente",
     "5f": "Enfocarme en cómo se sienten todos los demás en lugar de en mí",
-
-    "6": "¿Cuando recibes críticas o comentarios negativos?",
     "6a": "Estar de acuerdo con una sonrisa mientras me desmorono por dentro",
     "6b": "Jurar abordar cada punto perfectamente para nunca volver a escucharlo",
     "6c": "Cuestionar la autoridad o motivos del crítico",
     "6d": "Dejarlo a un lado y enfocarme en otra cosa",
     "6e": "Aceptar lo que es válido y descartar lo que no lo es",
     "6f": "Preocuparme por cómo se sintió la persona que dio el comentario",
-
-    "7": "Tarde en la noche, reflexionando sobre ti mismo, ¿qué pensamiento surge más?",
     "7a": "Tengo miedo de que la gente se decepcione si conociera mi verdadero yo",
     "7b": "Siempre hay una sensación de que no soy suficiente",
     "7c": "Me pone ansioso que no pueda controlar todo",
@@ -102,90 +78,37 @@
     "7e": "Me acepto como soy, imperfecciones y todo",
     "7f": "Me preocupa si estoy haciendo lo suficiente por las personas que me importan"
   },
-  "analyzing": {
-    "title": "Explorando tu sombra...",
-    "scanning": "Escaneando respuestas de sombra...",
-    "mapping": "Mapeando patrones de sombra...",
-    "integrating": "Integrando arquetipos...",
-    "complete": "¡Perfil de sombra completo!"
-  },
   "result": {
-    "your_type": "Tu Arquetipo de Sombra",
-    "shadow_dimensions": "Dimensiones de Sombra",
-    "dimension_scores": "Puntuaciones de Dimensiones",
-    "key_traits": "Patrones de Sombra",
-    "journal_prompt": "Reflexión para tu Diario",
-    "percentile": "Solo el {pct} de las personas comparten el arquetipo {type}",
-    "moreTests": "Explorar Más",
-    "share": "Comparte Tu Resultado"
+    "label": "Tu dirección de respuesta más frecuente",
+    "count": "{count} de 8 respuestas",
+    "summary": "Solo nombra la columna que elegiste más en estas ocho situaciones. No mide un rasgo oculto.",
+    "practice_heading": "Una observación para probar",
+    "practice": "Recuerda un momento reciente parecido. Separa lo ocurrido de tu interpretación, nombra lo que necesitabas y escribe otra respuesta que podrías probar.",
+    "boundary": "Úsalo como pregunta, no como etiqueta. El contexto, las relaciones, el ánimo y el momento cambian las elecciones. Ninguna respuesta, recuento o resultado se envía a analítica ni al enlace compartido.",
+    "next_label": "Siguiente paso privado",
+    "next_title": "Nombra la emoción bajo la reacción",
+    "next_cta": "Abrir Iceberg Emocional",
+    "share": "Copiar enlace neutro",
+    "restart": "Reflexionar de nuevo",
+    "copied": "Enlace copiado"
   },
-  "metric": {
-    "repression": "Represión",
-    "projection": "Proyección",
-    "denial": "Negación",
-    "avoidance": "Evitación",
-    "integration": "Integración"
+  "about": {
+    "toggle": "Qué puede y qué no puede decir esta actividad",
+    "heading": "Una lente junguiana, no una herramienta de medición",
+    "copy": "La psicología analítica llama “sombra” a experiencias no integradas en la identidad consciente. Eso no convierte estas seis direcciones en arquetipos validados. El resultado es un recuento transparente de tus elecciones.",
+    "formula": "Fórmula: cada respuesta suma un punto a su dirección; se muestra la de mayor recuento. En empates, se usa la primera dirección empatada.",
+    "source1": "IAAP: La sombra",
+    "source2": "SAP: Psicología analítica"
   },
-  "type": {
-    "peoplePleaser": {
-      "name": "El Complaciente",
-      "tagline": "Una máscara que oculta tu verdadero yo detrás de las expectativas de otros",
-      "description": "Tu sombra es la ira y los límites reprimidos. Un miedo inconsciente de que decir 'no' significa no ser amado te mantiene interpretando el papel de 'la persona amable'. Pero las relaciones auténticas comienzan cuando muestras tus emociones reales. Tu ira es una señal que apunta a dónde necesitan estar tus límites.",
-      "trait1": "Dificultad para establecer límites",
-      "trait2": "Evitación de conflictos",
-      "trait3": "Empatía excesiva",
-      "prompt": "\"¿Cuándo fue la última vez que dije genuinamente 'no'? ¿Qué emoción surgió cuando lo hice?\""
-    },
-    "perfectionist": {
-      "name": "El Perfeccionista",
-      "tagline": "Una armadura que oculta la vulnerabilidad detrás de una fachada impecable",
-      "description": "Tu sombra es la vulnerabilidad reprimida. Una creencia inconsciente de que los errores borran tu valor te mantiene en la interminable rueda de la automejora. Pero el verdadero crecimiento comienza cuando abrazas la imperfección. Ya eres suficiente.",
-      "trait1": "Autocrítica",
-      "trait2": "Estándares imposiblemente altos",
-      "trait3": "Miedo al fracaso",
-      "prompt": "\"Si pudiera ser amado incluso sin ser perfecto, ¿qué me atrevería a intentar?\""
-    },
-    "controller": {
-      "name": "El Controlador",
-      "tagline": "Una fortaleza construida sobre el control en lugar de la confianza",
-      "description": "Tu sombra es la confianza y la rendición reprimidas. Un miedo inconsciente de que soltar el control significa desmoronarse te mantiene constantemente en guardia. Pero paradójicamente, aceptar que no puedes controlar todo es cuando encuentras la verdadera estabilidad.",
-      "trait1": "Necesidad excesiva de control",
-      "trait2": "Dificultad para delegar",
-      "trait3": "Intolerancia a la incertidumbre",
-      "prompt": "\"Cuando realmente solté el control, ¿qué fue lo peor que pasó? ¿Fue realmente insoportable?\""
-    },
-    "avoider": {
-      "name": "El Evitador",
-      "tagline": "Una niebla que elige el entumecimiento seguro sobre la verdad dolorosa",
-      "description": "Tu sombra es el dolor y la confrontación reprimidos. Un miedo inconsciente de que sentir emociones incómodas te romperá te mantiene en tu zona segura. Pero ocultas en las cosas que evitas están tus mayores oportunidades de crecimiento.",
-      "trait1": "Entumecimiento emocional",
-      "trait2": "Patrones de procrastinación",
-      "trait3": "Evitación de conexión profunda",
-      "prompt": "\"¿Qué conversación, emoción o decisión estoy evitando más? ¿Qué estoy perdiendo al evitarla?\""
-    },
-    "rebel": {
-      "name": "El Rebelde",
-      "tagline": "Una llama salvaje que elige la libertad sobre la pertenencia",
-      "description": "Tu sombra es la pertenencia y la conformidad reprimidas. Un miedo inconsciente de que seguir las reglas significa perderte a ti mismo te mantiene en constante resistencia. Pero la verdadera libertad no viene de oponerte por oponerte, sino de elegir lo que genuinamente quieres.",
-      "trait1": "Desafiar la autoridad",
-      "trait2": "Independencia feroz",
-      "trait3": "Intimidad guardada",
-      "prompt": "\"¿Estoy realmente en contra de esto, o simplemente odio la sensación de ser controlado?\""
-    },
-    "caretaker": {
-      "name": "El Cuidador",
-      "tagline": "Un vacío detrás de la máscara de cuidar a todos menos a ti mismo",
-      "description": "Tu sombra es las necesidades propias reprimidas. Una creencia inconsciente de que priorizarte es egoísta te mantiene dando infinitamente a los demás. Pero no puedes verter de una taza vacía. El autocuidado no es egoísmo — es supervivencia.",
-      "trait1": "Autosacrificio",
-      "trait2": "Identidad a través de ser necesitado",
-      "trait3": "Dificultad para aceptar ayuda",
-      "prompt": "\"Si no tuviera a nadie a quien cuidar, ¿quién sería? ¿Existe mi identidad sin el cuidado?\""
-    }
+  "pattern": {
+    "appease": "Complacer",
+    "perfect": "Perfeccionar",
+    "control": "Controlar",
+    "withdraw": "Retirarse",
+    "assert": "Afirmarse",
+    "caretake": "Cuidar"
   },
-  "share": {
-    "text": "¡Mi arquetipo de sombra es '{type}'! ¿Cuál es tu yo oculto?"
-  },
-  "game": {
-    "back": "Inicio DopaBrain"
+  "footer": {
+    "home": "Biblioteca de DopaBrain"
   }
 }

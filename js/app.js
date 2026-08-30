@@ -1,653 +1,161 @@
-// Shadow Work Quiz - Meet Your Hidden Self
-// 8 questions, 6 shadow archetypes
-// Dimensions: repression, projection, denial, avoidance, integration
+(function(){
+  'use strict';
 
-const QUESTIONS = [
-    { id: 0, icon: '\u{1F4AC}', questionKey: 'question.0', options: ['question.0a', 'question.0b', 'question.0c', 'question.0d', 'question.0e', 'question.0f'] },
-    { id: 1, icon: '\u{1F91D}', questionKey: 'question.1', options: ['question.1a', 'question.1b', 'question.1c', 'question.1d', 'question.1e', 'question.1f'] },
-    { id: 2, icon: '\u{1F62D}', questionKey: 'question.2', options: ['question.2a', 'question.2b', 'question.2c', 'question.2d', 'question.2e', 'question.2f'] },
-    { id: 3, icon: '\u{1F4BC}', questionKey: 'question.3', options: ['question.3a', 'question.3b', 'question.3c', 'question.3d', 'question.3e', 'question.3f'] },
-    { id: 4, icon: '\u{1F550}', questionKey: 'question.4', options: ['question.4a', 'question.4b', 'question.4c', 'question.4d', 'question.4e', 'question.4f'] },
-    { id: 5, icon: '\u{1F30A}', questionKey: 'question.5', options: ['question.5a', 'question.5b', 'question.5c', 'question.5d', 'question.5e', 'question.5f'] },
-    { id: 6, icon: '\u{1F525}', questionKey: 'question.6', options: ['question.6a', 'question.6b', 'question.6c', 'question.6d', 'question.6e', 'question.6f'] },
-    { id: 7, icon: '\u{1F30C}', questionKey: 'question.7', options: ['question.7a', 'question.7b', 'question.7c', 'question.7d', 'question.7e', 'question.7f'] }
-];
+  var TOTAL=8;
+  var ICONS=['💬','🎤','💔','💼','🕰️','🌊','📝','🌙'];
+  var PATTERNS=[
+    {key:'appease',emoji:'🤝'},
+    {key:'perfect',emoji:'◆'},
+    {key:'control',emoji:'🧭'},
+    {key:'withdraw',emoji:'🌫️'},
+    {key:'assert',emoji:'🔥'},
+    {key:'caretake',emoji:'💜'}
+  ];
+  var SURFACES=['direct','en_jung_shadow_primary','shadow_trigger_reset','shadow_quiz_guide','clarity_board'];
+  var PRIVATE_KEYS=['answer','answers','score','scores','result','result_type','type','pattern','percentile'];
 
-// Type indices: 0=PeoplePleaser, 1=Perfectionist, 2=Controller, 3=Avoider, 4=Rebel, 5=Caretaker
-// Dimension scores: [repression, projection, denial, avoidance, integration]
-const SCORE_MAP = {
-    '0a': { type: [3,0,0,0,0,1], dim: [3,0,1,0,0] },
-    '0b': { type: [0,3,0,0,0,0], dim: [2,1,0,0,1] },
-    '0c': { type: [0,0,3,0,0,0], dim: [0,3,0,0,0] },
-    '0d': { type: [0,0,0,3,0,0], dim: [0,0,1,3,0] },
-    '0e': { type: [0,0,0,0,3,0], dim: [0,1,0,0,2] },
-    '0f': { type: [0,0,0,0,0,3], dim: [2,0,1,0,1] },
+  function t(key,fallback){
+    var value=window.i18n&&window.i18n.t?window.i18n.t(key):key;
+    return value===key?(fallback||key):value;
+  }
+  function show(screen){
+    document.querySelectorAll('.screen').forEach(function(node){node.classList.remove('active')});
+    screen.classList.add('active');
+    window.scrollTo(0,0);
+  }
+  function normalizeSurface(value){return SURFACES.indexOf(value)>-1?value:'direct'}
+  function track(name,params){
+    var payload=Object.assign({},params||{});
+    PRIVATE_KEYS.forEach(function(key){delete payload[key]});
+    if(typeof window.gtag==='function') window.gtag('event',name,payload);
+  }
+  function context(surface){
+    return {entry_surface:normalizeSurface(surface),language:window.i18n?window.i18n.currentLang:'en',app_version:'shadow_reflection_v3'};
+  }
+  function launchParams(){
+    var params=new URLSearchParams(window.location.search||'');
+    return {surface:normalizeSurface(params.get('surface')||'direct'),auto:params.get('start')==='1'};
+  }
+  function replace(text,values){
+    return Object.keys(values).reduce(function(output,key){return output.replace('{'+key+'}',values[key])},text);
+  }
 
-    '1a': { type: [3,0,0,0,0,0], dim: [3,0,0,1,0] },
-    '1b': { type: [0,3,0,0,0,0], dim: [1,2,0,0,1] },
-    '1c': { type: [0,0,3,0,0,0], dim: [0,3,0,0,0] },
-    '1d': { type: [0,0,0,3,0,0], dim: [1,0,1,3,0] },
-    '1e': { type: [0,0,0,0,3,0], dim: [0,0,0,0,3] },
-    '1f': { type: [0,0,0,0,0,3], dim: [2,0,1,1,0] },
+  async function init(){
+    var startScreen=document.getElementById('start-screen');
+    var questionScreen=document.getElementById('question-screen');
+    var resultScreen=document.getElementById('result-screen');
+    var startBtn=document.getElementById('start-btn');
+    var restartBtn=document.getElementById('restart-btn');
+    var shareBtn=document.getElementById('share-btn');
+    var relatedCta=document.getElementById('related-cta');
+    var evidence=document.getElementById('evidence-details');
+    var langSelect=document.getElementById('lang-select');
+    var themeToggle=document.getElementById('theme-toggle');
+    var questionText=document.getElementById('question-text');
+    var questionIcon=document.getElementById('question-icon');
+    var questionCounter=document.getElementById('question-counter');
+    var progressFill=document.getElementById('progress-fill');
+    var optionsContainer=document.getElementById('options-container');
+    var toast=document.getElementById('toast');
+    var launch=launchParams();
+    var current=0,answers=[],currentResult=null,autoConsumed=false,evidenceTracked=false,busy=false;
 
-    '2a': { type: [3,0,0,0,0,1], dim: [3,0,0,1,0] },
-    '2b': { type: [0,3,0,0,0,0], dim: [1,1,1,0,1] },
-    '2c': { type: [0,0,3,0,0,0], dim: [0,3,0,0,0] },
-    '2d': { type: [0,0,0,3,0,0], dim: [0,0,0,3,1] },
-    '2e': { type: [0,0,0,0,3,0], dim: [0,1,0,0,3] },
-    '2f': { type: [0,0,0,0,0,3], dim: [3,0,1,0,0] },
+    try{await window.i18n.init()}catch(error){console.warn('Shadow reflection locale fallback',error)}
 
-    '3a': { type: [3,0,0,0,0,0], dim: [3,0,0,0,1] },
-    '3b': { type: [0,3,0,0,0,0], dim: [2,1,0,0,0] },
-    '3c': { type: [0,0,3,0,0,0], dim: [0,3,0,0,0] },
-    '3d': { type: [0,0,0,3,0,0], dim: [0,0,1,3,0] },
-    '3e': { type: [0,0,0,0,3,0], dim: [0,0,0,0,3] },
-    '3f': { type: [0,1,0,0,0,3], dim: [2,0,1,0,1] },
-
-    '4a': { type: [3,0,0,0,0,0], dim: [3,0,1,0,0] },
-    '4b': { type: [0,3,0,0,0,0], dim: [1,2,0,0,0] },
-    '4c': { type: [0,0,3,0,0,0], dim: [0,3,0,0,0] },
-    '4d': { type: [0,0,0,3,0,0], dim: [1,0,0,3,0] },
-    '4e': { type: [0,0,0,0,3,0], dim: [0,0,0,0,3] },
-    '4f': { type: [0,0,0,0,0,3], dim: [3,0,0,1,0] },
-
-    '5a': { type: [3,0,0,0,0,1], dim: [3,0,0,0,0] },
-    '5b': { type: [0,3,0,0,0,0], dim: [2,0,1,0,1] },
-    '5c': { type: [0,0,3,0,0,0], dim: [0,3,0,0,0] },
-    '5d': { type: [0,0,0,3,0,0], dim: [0,0,1,3,0] },
-    '5e': { type: [0,0,0,0,3,0], dim: [0,1,0,0,3] },
-    '5f': { type: [0,0,0,0,0,3], dim: [3,0,0,0,0] },
-
-    '6a': { type: [3,0,0,0,0,0], dim: [3,0,0,1,0] },
-    '6b': { type: [0,3,0,0,0,0], dim: [1,2,0,0,0] },
-    '6c': { type: [0,0,3,0,0,0], dim: [0,3,0,0,0] },
-    '6d': { type: [0,0,0,3,0,0], dim: [0,0,1,3,0] },
-    '6e': { type: [0,0,0,0,3,0], dim: [0,0,0,0,3] },
-    '6f': { type: [0,0,0,0,0,3], dim: [2,0,1,0,1] },
-
-    '7a': { type: [3,0,0,0,0,1], dim: [3,0,0,0,0] },
-    '7b': { type: [0,3,0,0,0,0], dim: [1,1,1,0,1] },
-    '7c': { type: [0,0,3,0,0,0], dim: [0,3,0,0,0] },
-    '7d': { type: [0,0,0,3,0,0], dim: [1,0,0,3,0] },
-    '7e': { type: [0,0,0,0,3,0], dim: [0,0,0,0,3] },
-    '7f': { type: [0,0,0,0,0,3], dim: [3,0,0,1,0] }
-};
-
-const SHADOW_TYPES = {
-    peoplePleaser: {
-        id: 'peoplePleaser',
-        emoji: '\u{1F3AD}',
-        nameKey: 'type.peoplePleaser.name',
-        taglineKey: 'type.peoplePleaser.tagline',
-        descKey: 'type.peoplePleaser.description',
-        traitsKeys: ['type.peoplePleaser.trait1', 'type.peoplePleaser.trait2', 'type.peoplePleaser.trait3'],
-        promptKey: 'type.peoplePleaser.prompt',
-        color: '#f472b6'
-    },
-    perfectionist: {
-        id: 'perfectionist',
-        emoji: '\u{1F48E}',
-        nameKey: 'type.perfectionist.name',
-        taglineKey: 'type.perfectionist.tagline',
-        descKey: 'type.perfectionist.description',
-        traitsKeys: ['type.perfectionist.trait1', 'type.perfectionist.trait2', 'type.perfectionist.trait3'],
-        promptKey: 'type.perfectionist.prompt',
-        color: '#f59e0b'
-    },
-    controller: {
-        id: 'controller',
-        emoji: '\u{1F451}',
-        nameKey: 'type.controller.name',
-        taglineKey: 'type.controller.tagline',
-        descKey: 'type.controller.description',
-        traitsKeys: ['type.controller.trait1', 'type.controller.trait2', 'type.controller.trait3'],
-        promptKey: 'type.controller.prompt',
-        color: '#ef4444'
-    },
-    avoider: {
-        id: 'avoider',
-        emoji: '\u{1F32B}',
-        nameKey: 'type.avoider.name',
-        taglineKey: 'type.avoider.tagline',
-        descKey: 'type.avoider.description',
-        traitsKeys: ['type.avoider.trait1', 'type.avoider.trait2', 'type.avoider.trait3'],
-        promptKey: 'type.avoider.prompt',
-        color: '#6366f1'
-    },
-    rebel: {
-        id: 'rebel',
-        emoji: '\u{1F525}',
-        nameKey: 'type.rebel.name',
-        taglineKey: 'type.rebel.tagline',
-        descKey: 'type.rebel.description',
-        traitsKeys: ['type.rebel.trait1', 'type.rebel.trait2', 'type.rebel.trait3'],
-        promptKey: 'type.rebel.prompt',
-        color: '#10b981'
-    },
-    caretaker: {
-        id: 'caretaker',
-        emoji: '\u{1F49C}',
-        nameKey: 'type.caretaker.name',
-        taglineKey: 'type.caretaker.tagline',
-        descKey: 'type.caretaker.description',
-        traitsKeys: ['type.caretaker.trait1', 'type.caretaker.trait2', 'type.caretaker.trait3'],
-        promptKey: 'type.caretaker.prompt',
-        color: '#3b82f6'
+    function updateRelated(){
+      var url=new URL('/emotion-iceberg/',window.location.origin);
+      url.searchParams.set('lang',window.i18n.currentLang||'en');
+      url.searchParams.set('surface','shadow_reflection_result');
+      relatedCta.href=url.pathname+'?'+url.searchParams.toString();
     }
-};
-
-const TYPE_ORDER = ['peoplePleaser', 'perfectionist', 'controller', 'avoider', 'rebel', 'caretaker'];
-const DIMENSION_KEYS = ['repression', 'projection', 'denial', 'avoidance', 'integration'];
-
-class ShadowWorkApp {
-    constructor() {
-        this.currentQuestion = 0;
-        this.answers = [];
-        this.typeScores = [0, 0, 0, 0, 0, 0];
-        this.dimScores = [0, 0, 0, 0, 0];
-        this.resultType = null;
-        this.entrySurface = new URLSearchParams(window.location.search).get('surface') || 'direct';
-        this.autoStartConsumed = false;
-        this.resultViewTracked = false;
-        this.resultAdLoaded = false;
-        this.init();
+    function renderQuestion(){
+      var n=current+1;
+      questionCounter.textContent=n+' / '+TOTAL;
+      progressFill.style.width=(n/TOTAL*100)+'%';
+      questionIcon.textContent=ICONS[current];
+      questionText.textContent=t('question.'+current,'Question '+n);
+      optionsContainer.innerHTML='';
+      ['a','b','c','d','e','f'].forEach(function(letter,index){
+        var button=document.createElement('button');
+        button.type='button';
+        button.className='option-btn';
+        button.textContent=t('question.'+current+letter,'Option '+(index+1));
+        button.addEventListener('click',function(){choose(index)});
+        optionsContainer.appendChild(button);
+      });
+    }
+    function start(origin){
+      current=0;answers=[];currentResult=null;busy=false;
+      show(questionScreen);renderQuestion();
+      track('shadow_reflection_start',Object.assign(context(launch.surface),{start_origin:origin}));
+    }
+    function choose(index){
+      if(busy)return;
+      busy=true;answers[current]=index;
+      if(current<TOTAL-1){current+=1;renderQuestion();busy=false;return}
+      currentResult=calculate();renderResult();show(resultScreen);busy=false;
+      track('shadow_reflection_complete',Object.assign(context(launch.surface),{scenario_count:TOTAL}));
+    }
+    function calculate(){
+      var counts=[0,0,0,0,0,0];
+      answers.forEach(function(index){if(index>=0&&index<PATTERNS.length)counts[index]+=1});
+      var winner=0;
+      counts.forEach(function(count,index){if(count>counts[winner])winner=index});
+      return {index:winner,count:counts[winner]};
+    }
+    function renderResult(){
+      if(!currentResult)return;
+      var pattern=PATTERNS[currentResult.index];
+      document.getElementById('result-emoji').textContent=pattern.emoji;
+      document.getElementById('result-title').textContent=t('pattern.'+pattern.key,pattern.key);
+      document.getElementById('result-count').textContent=replace(t('result.count','{count} of 8 answers'),{count:String(currentResult.count)});
+      updateRelated();
+    }
+    function neutralUrl(){
+      var url=new URL('https://dopabrain.com/shadow-work/');
+      url.searchParams.set('lang',window.i18n.currentLang||'en');
+      return url.toString();
+    }
+    function announce(message){
+      toast.textContent=message;toast.classList.add('show');
+      window.setTimeout(function(){toast.classList.remove('show')},1800);
+    }
+    function copied(){announce(t('result.copied','Link copied'));track('shadow_reflection_share',Object.assign(context('direct'),{method:'copy'}))}
+    function fallbackCopy(value){
+      var input=document.createElement('textarea');input.value=value;input.setAttribute('readonly','');document.body.appendChild(input);input.select();
+      var ok=false;try{ok=document.execCommand('copy')}catch(error){ok=false}input.remove();if(ok)copied();
     }
 
-    async init() {
-        if (window.i18n) {
-            await window.i18n.init();
-        }
-
-        this.bindEvents();
-        this.initTheme();
-        this.hideLoader();
-        this.initializeBaseAds();
-
-        if (typeof DailyStreak !== 'undefined') { DailyStreak.init(); }
-        if (typeof GameAchievements !== 'undefined') { GameAchievements.init(); }
-        if (typeof GameAds !== 'undefined') { GameAds.init(); }
-        if (typeof Haptic !== 'undefined') { Haptic.init(); }
-
-        if (typeof gtag === 'function') {
-            gtag('event', 'page_view', { page_title: 'Shadow Work Quiz' });
-            setTimeout(() => {
-                gtag('event', 'page_engage', { event_category: 'shadow_work', engagement_time_msec: 5000 });
-            }, 5000);
-        }
-
-        this.tryAutoStart();
-    }
-
-    bindEvents() {
-        const startBtn = document.getElementById('start-btn');
-        if (startBtn) startBtn.addEventListener('click', () => this.startQuiz('intro_button'));
-
-        const retryBtn = document.getElementById('retry-btn');
-        if (retryBtn) retryBtn.addEventListener('click', () => this.restart());
-
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) themeToggle.addEventListener('click', () => this.toggleTheme());
-
-        const langToggle = document.getElementById('lang-toggle');
-        const langMenu = document.getElementById('lang-menu');
-        if (langToggle && langMenu) {
-            langToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                langMenu.classList.toggle('hidden');
-            });
-            document.querySelectorAll('.lang-option').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lang = btn.getAttribute('data-lang');
-                    if (window.i18n) window.i18n.setLanguage(lang);
-                    langMenu.classList.add('hidden');
-                });
-            });
-            document.addEventListener('click', () => langMenu.classList.add('hidden'));
-        }
-
-        document.getElementById('share-download')?.addEventListener('click', () => this.downloadResultCard());
-        document.getElementById('share-kakao')?.addEventListener('click', () => this.shareKakao());
-        document.getElementById('share-twitter')?.addEventListener('click', () => this.shareTwitter());
-        document.getElementById('share-facebook')?.addEventListener('click', () => this.shareFacebook());
-        document.getElementById('share-copy')?.addEventListener('click', () => this.shareCopy());
-    }
-
-    hideLoader() {
-        const loader = document.getElementById('app-loader');
-        if (loader) {
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                setTimeout(() => loader.style.display = 'none', 400);
-            }, 600);
-        }
-    }
-
-    initTheme() {
-        const saved = localStorage.getItem('theme');
-        if (saved === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            const toggle = document.getElementById('theme-toggle');
-            if (toggle) toggle.textContent = '\u{2600}';
-        }
-    }
-
-    toggleTheme() {
-        const current = document.documentElement.getAttribute('data-theme');
-        const toggle = document.getElementById('theme-toggle');
-        if (current === 'light') {
-            document.documentElement.removeAttribute('data-theme');
-            if (toggle) toggle.textContent = '\u{1F319}';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            if (toggle) toggle.textContent = '\u{2600}';
-            localStorage.setItem('theme', 'light');
-        }
-    }
-
-    showScreen(screenId) {
-        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-        const screen = document.getElementById(screenId);
-        if (screen) screen.classList.add('active');
-    }
-
-    trackEvent(name, params = {}) {
-        if (typeof gtag !== 'function') return;
-        gtag('event', name, Object.assign({
-            event_category: 'shadow_work',
-            entry_surface: this.entrySurface
-        }, params));
-    }
-
-    initializeBaseAds() {
-        // Auto Ads owns placement and paid-impression measurement.
-    }
-
-    tryAutoStart() {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get('start') !== '1' || this.autoStartConsumed) return;
-        this.autoStartConsumed = true;
-        this.trackEvent('shadow_work_auto_start', { cta_surface: this.entrySurface });
-        requestAnimationFrame(() => this.startQuiz('auto_start'));
-    }
-
-    startQuiz(trigger = 'intro_button') {
-        this.currentQuestion = 0;
-        this.answers = [];
-        this.typeScores = [0, 0, 0, 0, 0, 0];
-        this.dimScores = [0, 0, 0, 0, 0];
-        this.resultViewTracked = false;
-        this.showScreen('question-screen');
-        this.renderQuestion();
-
-        const eventParams = { cta_surface: this.entrySurface, start_trigger: trigger };
-        this.trackEvent('quiz_start', eventParams);
-        this.trackEvent('test_start', eventParams);
-    }
-
-    renderQuestion() {
-        const q = QUESTIONS[this.currentQuestion];
-        const t = window.i18n ? window.i18n.t.bind(window.i18n) : (k) => k;
-
-        const fill = document.getElementById('progress-fill');
-        if (fill) fill.style.width = ((this.currentQuestion / 8) * 100) + '%';
-
-        const counter = document.getElementById('q-current');
-        if (counter) counter.textContent = this.currentQuestion + 1;
-
-        const icon = document.getElementById('question-icon');
-        if (icon) icon.textContent = q.icon;
-
-        const text = document.getElementById('question-text');
-        if (text) text.textContent = t(q.questionKey);
-
-        const container = document.getElementById('options-container');
-        if (!container) return;
-        container.innerHTML = '';
-
-        const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
-        q.options.forEach((optKey, idx) => {
-            const btn = document.createElement('button');
-            btn.className = 'option-btn';
-            btn.innerHTML = '<span class="option-label">' + labels[idx] + '</span><span class="option-text">' + t(optKey) + '</span>';
-            btn.addEventListener('click', () => this.selectOption(q.id, idx, btn));
-            container.appendChild(btn);
-        });
-    }
-
-    selectOption(questionId, optionIdx, btn) {
-        document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-        btn.classList.add('selected');
-
-        const scoreKey = questionId + String.fromCharCode(97 + optionIdx);
-        const scoreData = SCORE_MAP[scoreKey];
-        if (scoreData) {
-            for (let i = 0; i < 6; i++) this.typeScores[i] += scoreData.type[i];
-            for (let i = 0; i < 5; i++) this.dimScores[i] += scoreData.dim[i];
-        }
-
-        this.answers.push({ question: questionId, option: optionIdx });
-
-        setTimeout(() => {
-            this.currentQuestion++;
-            if (this.currentQuestion < 8) {
-                this.renderQuestion();
-            } else {
-                this.showAnalyzing();
-            }
-        }, 400);
-    }
-
-    showAnalyzing() {
-        this.showScreen('analyzing-screen');
-
-        const fill = document.getElementById('analyzing-fill');
-        const percent = document.getElementById('analyzing-percent');
-        const detail = document.getElementById('analyzing-detail');
-        const t = window.i18n ? window.i18n.t.bind(window.i18n) : (k) => k;
-
-        const steps = [
-            { pct: 25, key: 'analyzing.scanning' },
-            { pct: 50, key: 'analyzing.mapping' },
-            { pct: 75, key: 'analyzing.integrating' },
-            { pct: 100, key: 'analyzing.complete' }
-        ];
-
-        let step = 0;
-        const interval = setInterval(() => {
-            if (step >= steps.length) {
-                clearInterval(interval);
-                setTimeout(() => this.showResult(), 400);
-                return;
-            }
-            if (fill) fill.style.width = steps[step].pct + '%';
-            if (percent) percent.textContent = steps[step].pct + '%';
-            if (detail) detail.textContent = t(steps[step].key);
-            step++;
-        }, 500);
-    }
-
-    calculateResult() {
-        let maxScore = -1;
-        let maxIdx = 0;
-        for (let i = 0; i < 6; i++) {
-            if (this.typeScores[i] > maxScore) {
-                maxScore = this.typeScores[i];
-                maxIdx = i;
-            }
-        }
-        return SHADOW_TYPES[TYPE_ORDER[maxIdx]];
-    }
-
-    getNormalizedDimensions() {
-        const maxPossible = 24;
-        return this.dimScores.map(s => Math.min(100, Math.round((s / maxPossible) * 100)));
-    }
-
-    drawRadarChart() {
-        const canvas = document.getElementById('radar-canvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        const t = window.i18n ? window.i18n.t.bind(window.i18n) : (k) => k;
-
-        const w = canvas.width;
-        const h = canvas.height;
-        const cx = w / 2;
-        const cy = h / 2;
-        const radius = Math.min(cx, cy) - 40;
-        const dims = this.getNormalizedDimensions();
-        const labels = DIMENSION_KEYS.map(k => t('metric.' + k));
-        const n = 5;
-        const angleStep = (2 * Math.PI) / n;
-        const startAngle = -Math.PI / 2;
-
-        ctx.clearRect(0, 0, w, h);
-
-        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-        const gridColor = isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.08)';
-        const labelColor = isLight ? '#666680' : '#8a8aaa';
-
-        for (let level = 1; level <= 4; level++) {
-            const r = (radius / 4) * level;
-            ctx.beginPath();
-            for (let i = 0; i <= n; i++) {
-                const angle = startAngle + angleStep * i;
-                const x = cx + r * Math.cos(angle);
-                const y = cy + r * Math.sin(angle);
-                if (i === 0) ctx.moveTo(x, y);
-                else ctx.lineTo(x, y);
-            }
-            ctx.closePath();
-            ctx.strokeStyle = gridColor;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-        }
-
-        for (let i = 0; i < n; i++) {
-            const angle = startAngle + angleStep * i;
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(cx + radius * Math.cos(angle), cy + radius * Math.sin(angle));
-            ctx.strokeStyle = gridColor;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-        }
-
-        ctx.beginPath();
-        for (let i = 0; i < n; i++) {
-            const angle = startAngle + angleStep * i;
-            const r = (dims[i] / 100) * radius;
-            const x = cx + r * Math.cos(angle);
-            const y = cy + r * Math.sin(angle);
-            if (i === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
-        }
-        ctx.closePath();
-        ctx.fillStyle = 'rgba(124,58,237,0.2)';
-        ctx.fill();
-        ctx.strokeStyle = '#7c3aed';
-        ctx.lineWidth = 2;
-        ctx.stroke();
-
-        for (let i = 0; i < n; i++) {
-            const angle = startAngle + angleStep * i;
-            const r = (dims[i] / 100) * radius;
-            const x = cx + r * Math.cos(angle);
-            const y = cy + r * Math.sin(angle);
-            ctx.beginPath();
-            ctx.arc(x, y, 4, 0, 2 * Math.PI);
-            ctx.fillStyle = '#7c3aed';
-            ctx.fill();
-            ctx.strokeStyle = '#fff';
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
-        }
-
-        ctx.font = '12px -apple-system, BlinkMacSystemFont, sans-serif';
-        ctx.fillStyle = labelColor;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        for (let i = 0; i < n; i++) {
-            const angle = startAngle + angleStep * i;
-            const labelR = radius + 24;
-            const x = cx + labelR * Math.cos(angle);
-            const y = cy + labelR * Math.sin(angle);
-            ctx.fillText(labels[i], x, y);
-        }
-    }
-
-    showResult() {
-        this.resultType = this.calculateResult();
-        const type = this.resultType;
-        const t = window.i18n ? window.i18n.t.bind(window.i18n) : (k) => k;
-
-        this.showScreen('result-screen');
-
-        const emoji = document.getElementById('result-emoji');
-        if (emoji) emoji.textContent = type.emoji;
-
-        const title = document.getElementById('result-title');
-        if (title) title.textContent = t(type.nameKey);
-
-        const tagline = document.getElementById('result-tagline');
-        if (tagline) tagline.textContent = '"' + t(type.taglineKey) + '"';
-
-        const desc = document.getElementById('result-description');
-        if (desc) desc.textContent = t(type.descKey);
-
-        this.drawRadarChart();
-
-        const dims = this.getNormalizedDimensions();
-        const metricsGrid = document.getElementById('metrics-grid');
-        if (metricsGrid) {
-            metricsGrid.innerHTML = '';
-            DIMENSION_KEYS.forEach((key, idx) => {
-                const row = document.createElement('div');
-                row.className = 'metric-row';
-                row.innerHTML = '<span class="metric-label">' + t('metric.' + key) + '</span>' +
-                    '<div class="metric-bar-bg"><div class="metric-bar-fill" style="background:' + type.color + '"></div></div>' +
-                    '<span class="metric-value">' + dims[idx] + '</span>';
-                metricsGrid.appendChild(row);
-                setTimeout(() => {
-                    row.querySelector('.metric-bar-fill').style.width = dims[idx] + '%';
-                }, 100);
-            });
-        }
-
-        const percentile = document.getElementById('percentile-stat');
-        const pctVal = Math.floor(Math.random() * 20) + 15;
-        if (percentile) {
-            percentile.innerHTML = t('result.percentile').replace('{pct}', '<strong>' + pctVal + '%</strong>').replace('{type}', t(type.nameKey));
-        }
-
-        const traitsList = document.getElementById('traits-list');
-        if (traitsList) {
-            traitsList.innerHTML = '';
-            type.traitsKeys.forEach(key => {
-                const tag = document.createElement('span');
-                tag.className = 'trait-tag';
-                tag.textContent = t(key);
-                traitsList.appendChild(tag);
-            });
-        }
-
-        const journalText = document.getElementById('journal-prompt-text');
-        if (journalText) journalText.textContent = t(type.promptKey);
-
-        this.spawnConfetti();
-        this.ensureResultAdLoaded();
-
-        if (!this.resultViewTracked) {
-            const resultParams = {
-                event_label: type.id,
-                result_type: type.id,
-                cta_surface: this.entrySurface,
-                value: 1
-            };
-            this.trackEvent('quiz_complete', resultParams);
-            this.trackEvent('test_complete', resultParams);
-            this.trackEvent('result_view', resultParams);
-            this.trackEvent('shadow_work_result_view', resultParams);
-            this.resultViewTracked = true;
-        }
-    }
-
-    ensureResultAdLoaded() {
-        // Auto Ads owns placement and paid-impression measurement.
-    }
-
-    spawnConfetti() {
-        const container = document.getElementById('confetti-container');
-        if (!container) return;
-        container.innerHTML = '';
-        const colors = ['#7c3aed', '#a78bfa', '#c4b5fd', '#6d28d9', '#8b5cf6', '#ddd6fe', '#4c1d95'];
-        for (let i = 0; i < 40; i++) {
-            const piece = document.createElement('div');
-            piece.className = 'confetti-piece';
-            piece.style.left = Math.random() * 100 + '%';
-            piece.style.background = colors[Math.floor(Math.random() * colors.length)];
-            piece.style.animationDelay = (Math.random() * 2) + 's';
-            piece.style.animationDuration = (2 + Math.random() * 2) + 's';
-            container.appendChild(piece);
-        }
-    }
-
-    restart() {
-        this.showScreen('intro-screen');
-        window.scrollTo(0, 0);
-    }
-
-    getShareText() {
-        if (!this.resultType) return '';
-        const t = window.i18n ? window.i18n.t.bind(window.i18n) : (k) => k;
-        return t('share.text').replace('{type}', t(this.resultType.nameKey));
-    }
-
-    getShareUrl() {
-        return 'https://dopabrain.com/shadow-work/';
-    }
-
-    shareKakao() {
-        const text = this.getShareText();
-        const url = 'https://sharer.kakao.com/talk/friends/picker/link?url=' + encodeURIComponent(this.getShareUrl()) + '&text=' + encodeURIComponent(text);
-        window.open(url, '_blank', 'width=600,height=400');
-    }
-
-    shareTwitter() {
-        const text = this.getShareText();
-        const url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(this.getShareUrl());
-        window.open(url, '_blank', 'width=600,height=400');
-    }
-
-    shareFacebook() {
-        const url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.getShareUrl());
-        window.open(url, '_blank', 'width=600,height=400');
-    }
-
-    async shareCopy() {
-        const text = this.getShareText() + ' ' + this.getShareUrl();
-        try {
-            await navigator.clipboard.writeText(text);
-            const btn = document.getElementById('share-copy');
-            if (btn) {
-                const original = btn.textContent;
-                btn.textContent = '\u{2705} Copied!';
-                setTimeout(() => btn.textContent = original, 2000);
-            }
-        } catch (e) {
-            const ta = document.createElement('textarea');
-            ta.value = text;
-            document.body.appendChild(ta);
-            ta.select();
-            document.execCommand('copy');
-            document.body.removeChild(ta);
-        }
-    }
-
-    downloadResultCard() {
-        if (!this.resultType || typeof ResultCard === 'undefined') return;
-
-        const t = window.i18n ? window.i18n.t.bind(window.i18n) : (k) => k;
-        const dims = this.getNormalizedDimensions();
-        const dimLabels = DIMENSION_KEYS.map(k => t('metric.' + k));
-
-        const dimensions = dimLabels.map((label, i) => ({
-            label: label,
-            pct: dims[i],
-            color: this.resultType.color
-        }));
-
-        ResultCard.download({
-            appName: 'Shadow Work Quiz',
-            typeName: t(this.resultType.nameKey),
-            typeEmoji: this.resultType.emoji,
-            dimensions: dimensions,
-            primaryColor: '#7c3aed',
-            tagline: 'dopabrain.com/shadow-work'
-        });
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    new ShadowWorkApp();
-});
+    startBtn.addEventListener('click',function(){start('intro_button')});
+    restartBtn.addEventListener('click',function(){track('shadow_reflection_restart',context('direct'));show(startScreen)});
+    shareBtn.addEventListener('click',function(){
+      var value=neutralUrl();
+      if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(value).then(copied).catch(function(){fallbackCopy(value)});
+      else fallbackCopy(value);
+    });
+    relatedCta.addEventListener('click',function(){track('shadow_reflection_related_click',Object.assign(context('direct'),{target_slug:'emotion-iceberg'}))});
+    evidence.addEventListener('toggle',function(){if(evidence.open&&!evidenceTracked){evidenceTracked=true;track('shadow_reflection_evidence_open',context('direct'))}});
+    themeToggle.addEventListener('click',function(){
+      var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',next);localStorage.setItem('shadow_reflection_theme',next);
+    });
+    langSelect.value=window.i18n.currentLang;
+    langSelect.addEventListener('change',async function(){
+      await window.i18n.setLanguage(this.value);updateRelated();
+      if(questionScreen.classList.contains('active'))renderQuestion();
+      if(resultScreen.classList.contains('active'))renderResult();
+    });
+
+    var savedTheme=localStorage.getItem('shadow_reflection_theme');
+    if(savedTheme==='light'||savedTheme==='dark')document.documentElement.setAttribute('data-theme',savedTheme);
+    updateRelated();
+    var loader=document.getElementById('app-loader');if(loader)loader.classList.add('hidden');
+    window.setTimeout(function(){if(document.visibilityState==='visible')track('shadow_reflection_view',context(launch.surface))},500);
+    if(launch.auto)window.setTimeout(function(){if(!autoConsumed&&startScreen.classList.contains('active')){autoConsumed=true;start(launch.surface)}},250);
+  }
+
+  init().catch(function(error){
+    console.error('Shadow reflection init error',error);
+    var loader=document.getElementById('app-loader');if(loader)loader.classList.add('hidden');
+  });
+})();
