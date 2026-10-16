@@ -87,7 +87,7 @@
     "boundary": "Treat this as a prompt, not a label. Context, relationships, mood, and timing can change your choices. No answer, count, or result name is sent to analytics or added to the share link.",
     "next_label": "Next private step",
     "next_title": "Name the feeling under the reaction",
-    "next_cta": "Open Emotion Iceberg",
+    "next_cta": "Open Future Self Simulator",
     "share": "Copy neutral link",
     "restart": "Reflect again",
     "copied": "Link copied"
