@@ -14,7 +14,7 @@ button,select{font:inherit}
 @keyframes pulse{50%{transform:scale(1.12);opacity:.65}}
 .app-header{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(16px)}
 .header-controls{max-width:720px;margin:auto;padding:10px 16px;display:flex;align-items:center;justify-content:flex-end;gap:10px}
-.brand{margin-right:auto;color:var(--text);font-weight:900;text-decoration:none;letter-spacing:.02em}
+.brand{margin-right:auto;color:var(--text);font-weight:900;text-decoration:none;letter-spacing:.02em;min-height:44px;display:inline-flex;align-items:center}
 .icon-btn,.lang-select{min-height:44px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text)}
 .icon-btn{min-width:44px;cursor:pointer}
 .lang-select{padding:0 34px 0 12px;cursor:pointer}
