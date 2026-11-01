@@ -63,8 +63,10 @@
     try{await window.i18n.init()}catch(error){console.warn('Shadow reflection locale fallback',error)}
 
     function updateRelated(){
+      var lang=window.i18n?window.i18n.currentLang:'en';
       var url=new URL('/emotion-iceberg/',window.location.origin);
-      url.searchParams.set('lang',window.i18n.currentLang||'en');
+      url.searchParams.set('lang',lang);
+      url.searchParams.set('source','shadow_work');
       url.searchParams.set('surface','shadow_reflection_result');
       relatedCta.href=url.pathname+'?'+url.searchParams.toString();
     }
@@ -133,7 +135,17 @@
       if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(value).then(copied).catch(function(){fallbackCopy(value)});
       else fallbackCopy(value);
     });
-    relatedCta.addEventListener('click',function(){track('shadow_reflection_related_click',Object.assign(context('direct'),{target_slug:'emotion-iceberg'}))});
+    relatedCta.addEventListener('click',function(){
+      track('shadow_reflection_related_click',Object.assign(context('direct'),{target_slug:'emotion-iceberg'}));
+      if(typeof gtag==='function'){
+        gtag('event','content_cta_click',{
+          link_id:'shadow_reflection_related_emotion_iceberg',
+          link_text:(relatedCta.textContent||'').trim().slice(0,40),
+          target_url:relatedCta.href||'',
+          source_page:'shadow_work'
+        });
+      }
+    });
     evidence.addEventListener('toggle',function(){if(evidence.open&&!evidenceTracked){evidenceTracked=true;track('shadow_reflection_evidence_open',context('direct'))}});
     themeToggle.addEventListener('click',function(){
       var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
