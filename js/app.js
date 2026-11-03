@@ -64,11 +64,45 @@
 
     function updateRelated(){
       var lang=window.i18n?window.i18n.currentLang:'en';
-      var url=new URL('/emotion-iceberg/',window.location.origin);
+      var url=new URL('/future-self/',window.location.origin);
       url.searchParams.set('lang',lang);
       url.searchParams.set('source','shadow_work');
       url.searchParams.set('surface','shadow_reflection_result');
-      relatedCta.href=url.pathname+'?'+url.searchParams.toString();
+      if (relatedCta) {
+        relatedCta.href=url.pathname+'?'+url.searchParams.toString();
+        if (!relatedCta.dataset.trackedCta) {
+          relatedCta.dataset.trackedCta = 'true';
+          relatedCta.addEventListener('click', function() {
+            track('content_cta_click', {
+              cta_surface: 'shadow_work_hero',
+              destination: relatedCta.getAttribute('href'),
+              source: 'shadow_work',
+              lang: lang
+            });
+          });
+        }
+      }
+
+      document.querySelectorAll('.related-grid a').forEach(function(link) {
+        var baseHref = link.getAttribute('data-base-href') || link.getAttribute('href');
+        try {
+          var u = new URL(baseHref, window.location.origin);
+          u.searchParams.set('lang', lang);
+          u.searchParams.set('source', 'shadow_work_result');
+          link.href = u.pathname + u.search;
+        } catch (_) {}
+        if (!link.dataset.trackedCta) {
+          link.dataset.trackedCta = 'true';
+          link.addEventListener('click', function() {
+            track('content_cta_click', {
+              cta_surface: 'shadow_work_related',
+              destination: link.getAttribute('href'),
+              source: 'shadow_work',
+              lang: lang
+            });
+          });
+        }
+      });
     }
     function renderQuestion(){
       var n=current+1;
