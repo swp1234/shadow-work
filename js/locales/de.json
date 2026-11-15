@@ -136,7 +136,13 @@
     "home": "DopaBrain-Inhaltsbibliothek"
   },
   "related": {
-    "emotionalAge": "Emotionales Alter"
+    "emotionalAge": "Emotionales Alter",
+    "title": "Mehr entdecken",
+    "futureSelf": "Zukünftiges Ich",
+    "toxicTrait": "Toxische Züge",
+    "attachmentStyle": "Bindungsstil",
+    "stressCheck": "Stress-Check",
+    "hspTest": "HSP-Test"
   },
   "curated": {
     "title": "Empfohlene Literatur zur Analytischen Psychologie",

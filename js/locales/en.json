@@ -136,7 +136,13 @@
     "home": "DopaBrain content library"
   },
   "related": {
-    "emotionalAge": "Emotional Age"
+    "emotionalAge": "Emotional Age",
+    "title": "More to Explore",
+    "futureSelf": "Future Self",
+    "toxicTrait": "Toxic Trait",
+    "attachmentStyle": "Attachment Style",
+    "stressCheck": "Stress Check",
+    "hspTest": "HSP Test"
   },
   "curated": {
     "title": "Recommended Analytical Psychology Reading",

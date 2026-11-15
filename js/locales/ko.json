@@ -136,7 +136,13 @@
     "home": "DopaBrain 콘텐츠 모음"
   },
   "related": {
-    "emotionalAge": "정서 나이"
+    "emotionalAge": "정서 나이",
+    "title": "더 탐색하기",
+    "futureSelf": "미래의 나",
+    "toxicTrait": "독성 성향 테스트",
+    "attachmentStyle": "애착 유형 테스트",
+    "stressCheck": "스트레스 체크",
+    "hspTest": "HSP 민감도 테스트"
   },
   "curated": {
     "title": "분석심리학·그림자 통합 추천 도서",

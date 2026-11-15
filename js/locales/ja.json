@@ -136,7 +136,13 @@
     "home": "DopaBrain コンテンツ一覧"
   },
   "related": {
-    "emotionalAge": "感情年齢"
+    "emotionalAge": "感情年齢",
+    "title": "さらに探索",
+    "futureSelf": "未来の自分",
+    "toxicTrait": "ダークな癖診断",
+    "attachmentStyle": "愛着スタイル診断",
+    "stressCheck": "ストレスチェック",
+    "hspTest": "HSP 繊細さん診断"
   },
   "curated": {
     "title": "分析心理学のおすすめ定番書籍",

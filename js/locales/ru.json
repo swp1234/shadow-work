@@ -136,7 +136,13 @@
     "home": "Библиотека DopaBrain"
   },
   "related": {
-    "emotionalAge": "Эмоциональный возраст"
+    "emotionalAge": "Эмоциональный возраст",
+    "title": "Узнать больше",
+    "futureSelf": "Будущее Я",
+    "toxicTrait": "Тест токсичных черт",
+    "attachmentStyle": "Тип привязанности",
+    "stressCheck": "Проверка стресса",
+    "hspTest": "Тест ВЧЛ (HSP)"
   },
   "curated": {
     "title": "Рекомендуемые книги по аналитической психологии",

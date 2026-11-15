@@ -136,7 +136,13 @@
     "home": "Pustaka konten DopaBrain"
   },
   "related": {
-    "emotionalAge": "Usia Emosional"
+    "emotionalAge": "Usia Emosional",
+    "title": "Jelajahi Lebih Lanjut",
+    "futureSelf": "Diri Masa Depan",
+    "toxicTrait": "Sifat Toksik",
+    "attachmentStyle": "Gaya Kelekatan",
+    "stressCheck": "Cek Stres",
+    "hspTest": "Tes HSP"
   },
   "curated": {
     "title": "Bacaan Psikologi Analitik Pilihan",

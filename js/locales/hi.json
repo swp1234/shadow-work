@@ -136,7 +136,13 @@
     "home": "DopaBrain सामग्री पुस्तकालय"
   },
   "related": {
-    "emotionalAge": "भावनात्मक आयु"
+    "emotionalAge": "भावनात्मक आयु",
+    "title": "और देखें",
+    "futureSelf": "भविष्य का स्वयं",
+    "toxicTrait": "टॉक्सिक आदत टेस्ट",
+    "attachmentStyle": "अटैचमेंट स्टाइल टेस्ट",
+    "stressCheck": "तनाव जांच",
+    "hspTest": "HSP संवेदनशीलता टेस्ट"
   },
   "curated": {
     "title": "विश्लेषणात्मक मनोविज्ञान की अनुशंसित पुस्तकें",

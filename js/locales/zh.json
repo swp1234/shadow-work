@@ -136,7 +136,13 @@
     "home": "DopaBrain 内容库"
   },
   "related": {
-    "emotionalAge": "情绪年龄"
+    "emotionalAge": "情绪年龄",
+    "title": "探索更多",
+    "futureSelf": "未来的自己",
+    "toxicTrait": "毒舌/暗黑特质测试",
+    "attachmentStyle": "依恋类型测试",
+    "stressCheck": "压力检测",
+    "hspTest": "HSP 高敏感测试"
   },
   "curated": {
     "title": "分析心理学推荐读物",

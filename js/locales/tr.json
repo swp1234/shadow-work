@@ -136,7 +136,13 @@
     "home": "DopaBrain içerik kitaplığı"
   },
   "related": {
-    "emotionalAge": "Duygusal Yaş"
+    "emotionalAge": "Duygusal Yaş",
+    "title": "Daha Fazlasını Keşfet",
+    "futureSelf": "Gelecekteki Ben",
+    "toxicTrait": "Toksik Özellik",
+    "attachmentStyle": "Bağlanma Stili",
+    "stressCheck": "Stres Kontrolü",
+    "hspTest": "HSP Hassasiyet Testi"
   },
   "curated": {
     "title": "Analitik Psikoloji İçin Önerilen Kitaplar",

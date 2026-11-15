@@ -136,7 +136,13 @@
     "home": "Biblioteca de DopaBrain"
   },
   "related": {
-    "emotionalAge": "Edad Emocional"
+    "emotionalAge": "Edad Emocional",
+    "title": "Explorar más",
+    "futureSelf": "Yo Futuro",
+    "toxicTrait": "Rasgo Tóxico",
+    "attachmentStyle": "Estilo de Apego",
+    "stressCheck": "Control de Estrés",
+    "hspTest": "Test HSP"
   },
   "curated": {
     "title": "Lecturas Recomendadas de Psicología Analítica",

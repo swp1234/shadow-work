@@ -136,7 +136,13 @@
     "home": "Bibliothèque DopaBrain"
   },
   "related": {
-    "emotionalAge": "Âge émotionnel"
+    "emotionalAge": "Âge émotionnel",
+    "title": "Explorer plus",
+    "futureSelf": "Moi Futur",
+    "toxicTrait": "Trait Toxique",
+    "attachmentStyle": "Style d’Attachement",
+    "stressCheck": "Bilan de Stress",
+    "hspTest": "Test HSP"
   },
   "curated": {
     "title": "Lectures de Psychologie Analytique",
