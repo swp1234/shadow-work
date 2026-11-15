@@ -59,6 +59,17 @@ h1{margin:0;font-size:clamp(32px,7vw,50px);line-height:1.08;letter-spacing:-.035
 .next-step .eyebrow{margin-bottom:2px}
 .next-step h3{font-size:17px}
 .result-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}
+.curated-card{margin:22px 0;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--surface-2);text-align:left}
+.curated-card h3{margin:0 0 6px;font-size:16px}
+.curated-subtitle{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.5}
+.curated-list{display:flex;flex-direction:column;gap:10px}
+.curated-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;min-height:44px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);text-decoration:none;transition:border-color .15s,transform .15s}
+.curated-item:hover{border-color:var(--primary);transform:translateY(-1px)}
+.curated-item-meta{display:flex;flex-direction:column;gap:3px;min-width:0}
+.curated-item-title{font-size:14px;font-weight:750;color:var(--text);line-height:1.35}
+.curated-item-desc{font-size:12px;color:var(--muted);line-height:1.4}
+.curated-item-cta{font-size:12px;font-weight:800;color:var(--primary);white-space:nowrap;flex-shrink:0}
+.curated-disclosure{margin:10px 0 0;font-size:11px;color:var(--muted);line-height:1.4}
 .about-section{width:min(720px,calc(100% - 32px));margin:0 auto 36px}
 details{border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden}
 summary{min-height:52px;padding:15px 18px;cursor:pointer;font-weight:850}

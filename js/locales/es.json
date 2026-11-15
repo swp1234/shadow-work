@@ -90,7 +90,8 @@
     "next_cta": "Abrir simulador del yo futuro",
     "share": "Copiar enlace neutro",
     "restart": "Reflexionar de nuevo",
-    "copied": "Enlace copiado"
+    "copied": "Enlace copiado",
+    "downloadCard": "Guardar tarjeta"
   },
   "about": {
     "toggle": "Lo que esta actividad puede y no puede decirte",
@@ -133,5 +134,18 @@
   },
   "footer": {
     "home": "Biblioteca de DopaBrain"
+  },
+  "related": {
+    "emotionalAge": "Edad Emocional"
+  },
+  "curated": {
+    "title": "Lecturas Recomendadas de Psicología Analítica",
+    "subtitle": "Textos clásicos para acompañar una reflexión tranquila sobre tus reacciones.",
+    "book1Title": "El Hombre y sus Símbolos — Carl G. Jung",
+    "book1Desc": "Introducción ilustrada a los arquetipos, los sueños y el simbolismo personal",
+    "book2Title": "Encuentro con la Sombra — Connie Zweig y Jeremiah Abrams",
+    "book2Desc": "Antología de enfoques psicológicos sobre la integración de emociones reprimidas",
+    "cta": "Ver libro",
+    "disclosure": "Divulgación de afiliados: Como Afiliado de Amazon, DopaBrain puede ganar ingresos por compras elegibles."
   }
 }

@@ -90,7 +90,8 @@
     "next_cta": "Buka Simulator Diri Masa Depan",
     "share": "Salin tautan netral",
     "restart": "Refleksi lagi",
-    "copied": "Tautan disalin"
+    "copied": "Tautan disalin",
+    "downloadCard": "Simpan kartu hasil"
   },
   "about": {
     "toggle": "Yang dapat dan tidak dapat diungkapkan aktivitas ini",
@@ -133,5 +134,18 @@
   },
   "footer": {
     "home": "Pustaka konten DopaBrain"
+  },
+  "related": {
+    "emotionalAge": "Usia Emosional"
+  },
+  "curated": {
+    "title": "Bacaan Psikologi Analitik Pilihan",
+    "subtitle": "Teks klasik Jungian untuk mendampingi refleksi diri dan penulisan jurnal.",
+    "book1Title": "Man and His Symbols — Carl G. Jung",
+    "book1Desc": "Pengantar bergambar tentang arketipe, mimpi, dan simbolisme pribadi",
+    "book2Title": "Meeting the Shadow — Connie Zweig & Jeremiah Abrams",
+    "book2Desc": "Antologi sudut pandang psikologis mengenai emosi yang terpendam",
+    "cta": "Lihat buku",
+    "disclosure": "Pengungkapan afiliasi: Sebagai Amazon Associate, DopaBrain dapat memperoleh komisi dari pembelian yang memenuhi syarat."
   }
 }

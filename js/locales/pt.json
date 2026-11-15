@@ -90,7 +90,8 @@
     "next_cta": "Abrir simulador do eu futuro",
     "share": "Copiar link neutro",
     "restart": "Refletir novamente",
-    "copied": "Link copiado"
+    "copied": "Link copiado",
+    "downloadCard": "Salvar cartão"
   },
   "about": {
     "toggle": "O que esta atividade pode e não pode mostrar",
@@ -133,5 +134,18 @@
   },
   "footer": {
     "home": "Biblioteca DopaBrain"
+  },
+  "related": {
+    "emotionalAge": "Idade Emocional"
+  },
+  "curated": {
+    "title": "Leituras de Psicologia Analítica",
+    "subtitle": "Obras clássicas para apoiar a escrita reflexiva e a observação consciente.",
+    "book1Title": "O Homem e Seus Símbolos — Carl G. Jung",
+    "book1Desc": "Introdução ilustrada aos arquétipos, sonhos e simbolismo pessoal",
+    "book2Title": "Ao Encontro da Sombra — Connie Zweig e Jeremiah Abrams",
+    "book2Desc": "Coletânea de perspectivas psicológicas sobre emoções reprimidas e autoconhecimento",
+    "cta": "Ver livro",
+    "disclosure": "Divulgação de afiliados: Como Associado da Amazon, o DopaBrain pode ganhar com compras qualificadas."
   }
 }

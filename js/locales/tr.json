@@ -90,7 +90,8 @@
     "next_cta": "Gelecekteki Ben Simülatörünü Aç",
     "share": "Nötr bağlantıyı kopyala",
     "restart": "Yeniden yansıt",
-    "copied": "Bağlantı kopyalandı"
+    "copied": "Bağlantı kopyalandı",
+    "downloadCard": "Kartı kaydet"
   },
   "about": {
     "toggle": "Bu etkinliğin anlatabileceği ve anlatamayacağı şeyler",
@@ -133,5 +134,18 @@
   },
   "footer": {
     "home": "DopaBrain içerik kitaplığı"
+  },
+  "related": {
+    "emotionalAge": "Duygusal Yaş"
+  },
+  "curated": {
+    "title": "Analitik Psikoloji İçin Önerilen Kitaplar",
+    "subtitle": "Bilinçli öz değerlendirme ve günlük çalışmasını destekleyen temel eserler.",
+    "book1Title": "İnsan ve Sembolleri — Carl G. Jung",
+    "book1Desc": "Arketiplere, rüyalara ve kişisel sembolizme görsel giriş kitabı",
+    "book2Title": "Gölgeyle Buluşma — Connie Zweig ve Jeremiah Abrams",
+    "book2Desc": "Bastırılmış duyguları anlamaya yönelik psikolojik perspektifler derlemesi",
+    "cta": "Kitabı incele",
+    "disclosure": "Ortaklık bildirimi: Amazon İş Ortağı olarak uygun satın alımlardan gelir elde edebiliriz."
   }
 }

@@ -46,6 +46,7 @@
     var resultScreen=document.getElementById('result-screen');
     var startBtn=document.getElementById('start-btn');
     var restartBtn=document.getElementById('restart-btn');
+    var downloadCardBtn=document.getElementById('download-card-btn');
     var shareBtn=document.getElementById('share-btn');
     var relatedCta=document.getElementById('related-cta');
     var evidence=document.getElementById('evidence-details');
@@ -99,6 +100,34 @@
               destination: link.getAttribute('href'),
               source: 'shadow_work',
               lang: lang
+            });
+          });
+        }
+      });
+
+      var stores = { de: 'www.amazon.de', fr: 'www.amazon.fr', es: 'www.amazon.es', ja: 'www.amazon.co.jp', ko: 'www.amazon.com' };
+      var host = stores[lang] || 'www.amazon.com';
+      var curatedUrls = {
+        manAndHisSymbols: 'https://' + host + '/dp/0440351839?tag=dopabrain-20',
+        meetingTheShadow: 'https://' + host + '/dp/087477618X?tag=dopabrain-20'
+      };
+      document.querySelectorAll('#curated-resources-card .curated-item').forEach(function(link) {
+        var key = link.getAttribute('data-curated-key');
+        if (curatedUrls[key]) link.setAttribute('href', curatedUrls[key]);
+        if (!link.dataset.trackedCurated) {
+          link.dataset.trackedCurated = 'true';
+          link.addEventListener('click', function() {
+            var activeLang = window.i18n ? window.i18n.currentLang : lang;
+            track('curated_resource_click', {
+              app_name: 'shadow-work',
+              resource_key: key,
+              content_locale: activeLang,
+              cta_surface: 'curated_resources'
+            });
+            track('content_cta_click', {
+              cta_type: 'curated_book',
+              destination: link.getAttribute('href'),
+              source: 'shadow_work'
             });
           });
         }
@@ -161,9 +190,39 @@
       var input=document.createElement('textarea');input.value=value;input.setAttribute('readonly','');document.body.appendChild(input);input.select();
       var ok=false;try{ok=document.execCommand('copy')}catch(error){ok=false}input.remove();if(ok)copied();
     }
+    function downloadStoryCard(){
+      if(!currentResult)return;
+      var item=PATTERNS[currentResult.index];
+      var label=t('pattern.'+item.key,item.key);
+      var countLine=replace(t('result.count','{count} of 8 answers'),{count:String(currentResult.count)});
+      var summaryText=t('result.summary','This names only the answer column you chose most often in these eight scenarios.');
+      var canvas=document.createElement('canvas');
+      canvas.width=1080;canvas.height=1920;
+      var ctx=canvas.getContext('2d');
+      var grad=ctx.createLinearGradient(0,0,1080,1920);
+      grad.addColorStop(0,'#0c0b16');grad.addColorStop(0.55,'#211c35');grad.addColorStop(1,'#171426');
+      ctx.fillStyle=grad;ctx.fillRect(0,0,1080,1920);
+      ctx.fillStyle='rgba(167,139,250,0.16)';ctx.beginPath();ctx.arc(540,560,320,0,Math.PI*2);ctx.fill();
+      ctx.fillStyle='#a78bfa';ctx.font='bold 34px sans-serif';ctx.textAlign='center';
+      ctx.fillText('DOPABRAIN · SHADOW REFLECTION',540,210);
+      ctx.font='180px sans-serif';ctx.fillText(item.emoji,540,610);
+      ctx.fillStyle='#ffffff';ctx.font='bold 64px sans-serif';ctx.fillText(label,540,790);
+      ctx.fillStyle='#a78bfa';ctx.font='bold 36px sans-serif';ctx.fillText(countLine,540,870);
+      ctx.fillStyle='#cbd5e1';ctx.font='32px sans-serif';
+      var words=summaryText.split(' '),line='',y=980;
+      for(var i=0;i<words.length;i++){
+        var test=line?(line+' '+words[i]):words[i];
+        if(ctx.measureText(test).width>860&&line){ctx.fillText(line,540,y);line=words[i];y+=48;if(y>1520)break;}else{line=test;}
+      }
+      if(line&&y<=1560)ctx.fillText(line,540,y);
+      ctx.fillStyle='#94a3b8';ctx.font='bold 30px sans-serif';ctx.fillText('dopabrain.com/shadow-work/',540,1760);
+      try{var a=document.createElement('a');a.download='shadow-reflection.png';a.href=canvas.toDataURL('image/png');a.click();}catch(_){}
+      track('save_image',Object.assign(context('direct'),{save_surface:'result_story_1080x1920'}));
+    }
 
     startBtn.addEventListener('click',function(){start('intro_button')});
     restartBtn.addEventListener('click',function(){track('shadow_reflection_restart',context('direct'));show(startScreen)});
+    if(downloadCardBtn)downloadCardBtn.addEventListener('click',downloadStoryCard);
     shareBtn.addEventListener('click',function(){
       var value=neutralUrl();
       if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(value).then(copied).catch(function(){fallbackCopy(value)});

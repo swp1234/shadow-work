@@ -90,7 +90,8 @@
     "next_cta": "Open Future Self Simulator",
     "share": "Copy neutral link",
     "restart": "Reflect again",
-    "copied": "Link copied"
+    "copied": "Link copied",
+    "downloadCard": "Save story card"
   },
   "about": {
     "toggle": "What this activity can and cannot tell you",
@@ -133,5 +134,18 @@
   },
   "footer": {
     "home": "DopaBrain content library"
+  },
+  "related": {
+    "emotionalAge": "Emotional Age"
+  },
+  "curated": {
+    "title": "Recommended Analytical Psychology Reading",
+    "subtitle": "Classic Jungian texts to support grounded self-reflection and journaling.",
+    "book1Title": "Man and His Symbols — Carl G. Jung",
+    "book1Desc": "Illustrated introduction to Jungian archetypes, dreams, and personal symbolism",
+    "book2Title": "Meeting the Shadow — Connie Zweig & Jeremiah Abrams",
+    "book2Desc": "Anthology of psychological perspectives on integrating repressed emotions",
+    "cta": "View Book",
+    "disclosure": "Affiliate disclosure: As an Amazon Associate, DopaBrain may earn from qualifying purchases."
   }
 }

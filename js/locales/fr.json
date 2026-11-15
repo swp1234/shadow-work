@@ -90,7 +90,8 @@
     "next_cta": "Ouvrir le simulateur de soi futur",
     "share": "Copier le lien neutre",
     "restart": "Réfléchir à nouveau",
-    "copied": "Lien copié"
+    "copied": "Lien copié",
+    "downloadCard": "Enregistrer la carte"
   },
   "about": {
     "toggle": "Ce que cet exercice peut et ne peut pas révéler",
@@ -133,5 +134,18 @@
   },
   "footer": {
     "home": "Bibliothèque DopaBrain"
+  },
+  "related": {
+    "emotionalAge": "Âge émotionnel"
+  },
+  "curated": {
+    "title": "Lectures de Psychologie Analytique",
+    "subtitle": "Ouvrages de référence pour accompagner l’introspection et la tenue de journal.",
+    "book1Title": "L’Homme et ses symboles — Carl G. Jung",
+    "book1Desc": "Introduction illustrée aux archétypes, aux rêves et au symbolisme personnel",
+    "book2Title": "Meeting the Shadow — Connie Zweig et Jeremiah Abrams",
+    "book2Desc": "Anthologie de regards psychologiques sur l’intégration des émotions réprimées",
+    "cta": "Voir le livre",
+    "disclosure": "Lien affilié : En tant que Partenaire Amazon, DopaBrain réalise un bénéfice sur les achats éligibles."
   }
 }

@@ -90,7 +90,8 @@
     "next_cta": "Zukunfts-Ich Simulator öffnen",
     "share": "Neutralen Link kopieren",
     "restart": "Erneut reflektieren",
-    "copied": "Link kopiert"
+    "copied": "Link kopiert",
+    "downloadCard": "Ergebniskarte speichern"
   },
   "about": {
     "toggle": "Was diese Übung aussagt und was nicht",
@@ -133,5 +134,18 @@
   },
   "footer": {
     "home": "DopaBrain-Inhaltsbibliothek"
+  },
+  "related": {
+    "emotionalAge": "Emotionales Alter"
+  },
+  "curated": {
+    "title": "Empfohlene Literatur zur Analytischen Psychologie",
+    "subtitle": "Klassische Texte zur fundierten Selbstreflexion und persönlichen Einordnung.",
+    "book1Title": "Der Mensch und seine Symbole — Carl G. Jung",
+    "book1Desc": "Illustrierte Einführung in Archetypen, Träume und persönliche Symbolik",
+    "book2Title": "Die dunkle Seite der Seele (Meeting the Shadow) — Zweig & Abrams",
+    "book2Desc": "Anthologie psychologischer Perspektiven zum Umgang mit verdrängten Gefühlen",
+    "cta": "Buch ansehen",
+    "disclosure": "Affiliate-Hinweis: Als Amazon-Partner verdient DopaBrain an qualifizierten Verkäufen."
   }
 }
